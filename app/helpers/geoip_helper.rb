@@ -4,8 +4,8 @@ module GeoipHelper
   
   def whereis(ip)
     ip = '137.40.90.186' if (ip == '127.0.0.1')  # hetzner
-    geo = GeoIP.new( File.expand_path("~/svn/carlessong/geoip/GeoLiteCity.dat"))  #{ }"#{RAILS_ROOT}/app/geoip/GeoLiteCity.dat" )
-    #g = geo.city( 'google.com' ) # errore per IPv6... 74.125.43.103 is an IP
+    #geo = GeoIP.new( File.expand_path("~/svn/carlessong/geoip/GeoLiteCity.dat"))  #{ }"#{RAILS_ROOT}/app/geoip/GeoLiteCity.dat" )
+    geo = GeoIP.new( "#{RAILS_ROOT}/vendor/GeoLiteCity.dat" )
     g = geo.city( ip ) # errore per IPv6... 74.125.43.103 is an IP]
     #return g
     # g[0] #hostname
