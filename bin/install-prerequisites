@@ -2,6 +2,6 @@
 
 echo TODO
 
-gem install geoip ym4r contacts icalendar calendar_date_select geokit contacts hpricot sqlite3 passenger
-sudo gem install openrain-action_mailer_tls -s http://gems.github.com
+gem install geoip ym4r contacts icalendar calendar_date_select geokit contacts hpricot sqlite3 passenger --no-ri --no-rdoc
+sudo gem install openrain-action_mailer_tls -s http://gems.github.com --no-ri --no-rdoc
 
