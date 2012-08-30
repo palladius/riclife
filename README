@@ -1,6 +1,0 @@
-
-# README migrated to -> doc/README_FOR_APP
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
-
-
-Attento che rake doc:app ci mette UNA VITA (una RicVita actually)
