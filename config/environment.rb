@@ -1,7 +1,6 @@
 
-# sarebbe bello ma mi si incasina...
-#RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
-RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
+# from 2012 its 2.3.12...
+RAILS_GEM_VERSION = '2.3.12' unless defined? RAILS_GEM_VERSION
 
 RICLIFE_VERSION =   "1.1.0 # SMTP TLS gmail ruscoric :)"
 RICLIFE_HISTORY =   "0.9.3 # updated to rails 2.3.5 e un sacco di altro.."
@@ -29,14 +28,15 @@ Rails::Initializer.run do |config|
   
   
   #config.gem "pincopallo"   if (RAILS_ENV == 'development')
-  config.gem "openrain-action_mailer_tls", :lib => "smtp_tls.rb", :source => "http://gems.github.com"
-  config.gem "geokit" # per google maps
-  #config.gem "geoip"  # per autodetect IP --> Sligo, Ireland
   config.gem "calendar_date_select" # per le date
   config.gem "contacts" # per i contatti gmail, ...
-  config.gem "icalendar" # non ricordo
-  config.gem "ym4r"     # non ricordo
   config.gem "geoip"    # automatic address resolution
+  config.gem "geokit" # per google maps
+  config.gem "hpricot"  # something asks for it!
+  config.gem "icalendar" # non ricordo
+  config.gem "openrain-action_mailer_tls", :lib => "smtp_tls.rb", :source => "http://gems.github.com"
+  config.gem "sqlite3"  # for naive DB... :)
+  config.gem "ym4r"     # non ricordo
   
 
   #config.active_record.observers = :user_observer
@@ -45,10 +45,8 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
-  # config.gem "aws-s3", :lib => "aws/s3"
 
 
 
