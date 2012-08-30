@@ -1,0 +1,24 @@
+<h1><%= @graph_name.camelize %></h1>
+	<%= render :partial => "graphs/list_all" %>
+
+	
+<h2>Graph Info</h2>
+
+<p>N Nodes: <%= @nodes.size rescue -1 %>
+<p>N Edges: <%= @edges.size rescue -1 %>
+
+Description:
+<pre>
+	<%# @graph.get_description().inspect %>Definito nel modello ma NON nel controller, ed è un casino... TBD
+</pre>
+
+<p>Raw data:
+<pre><%= @graph_data %></pre>
+
+<p>Return:
+<pre><%= @generic_svg %></pre>
+
+ 
+<img src="/graphs/person_family.png" height="100" />
+<img src="/graphs/<%=@graph_name%>.png" height="100" />
+

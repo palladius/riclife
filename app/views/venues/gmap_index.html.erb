@@ -1,0 +1,14 @@
+<html>
+   <head>
+      <title>Map of Venues</title>
+   </head>
+
+   <body>
+		<h1>
+		 <%= image_tag( 'models/venue.png' ) %>
+		 Map of Venues
+		</h1>
+      <%= @map.to_html %>
+      <%= @map.div(:width => 800, :height => 600) %>
+   </body>
+</html>

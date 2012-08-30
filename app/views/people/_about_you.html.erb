@@ -1,0 +1,13 @@
+<% you = person rescue nil %>  
+<%= render :partial => 'shared/crate_begin', :locals => { :title =>( you.to_s rescue "I dont know who you are (#{$!})") , :icon_path => 'models/person.png' } %>
+  <hr/>
+<% if you %>
+	<%= render :partial => 'people/fancy', :locals => { :person => you } %>
+	<%= render :partial => 'people/map', :locals => { :person => you } %>
+	TBD and dflt project.. 
+	and dflt calendar
+<% else %>
+	I dont know who you are! please login..
+<% end %>
+<%= render :partial => 'shared/crate_end' %>
+

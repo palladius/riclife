@@ -1,0 +1,9 @@
+<%= render :partial => 'shared/crate_begin', :locals =>
+  { :title => "Last subscriptions", :icon_path => 'models/person.png' }
+%>
+  <% Person.find(:all, :limit => 7, :order => 'updated_at DESC').each{ |x| %>
+    <li>
+      <%= render :partial => 'people/fancy', :locals => { :person => x } %>
+    </li>
+  <% } %>
+<%= render :partial => 'shared/crate_end' %>

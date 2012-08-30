@@ -1,0 +1,29 @@
+
+<% form_for(@page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :tags %><br />
+    <%= f.text_field :tags %>
+  </p>
+  <p>
+    <%= f.label :person_id %><br />
+    <%#= f.text_field :person_id %>
+	<%= collection_select("page", "person_id", Person.find_all_by_published(true, :order => 'surname') , :id, :name_surname , :include_blank => true ) %>
+  </p>
+  <p>
+    <%= f.label :header %><br />
+    <%= f.text_area :header %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>

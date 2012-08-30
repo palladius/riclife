@@ -1,0 +1,8 @@
+<span class='event <%='inactive' if event.past? %>' >
+		<b><%= link_to event,event %></b>
+		( <%=  event.venue %>,
+		 	<i> 
+				<%= 'in' unless event.past? %> <%= distance_of_time_in_words_to_now(event.tstart) %> <%= 'ago' if event.past? %>
+			</i> 	
+		)
+</span>

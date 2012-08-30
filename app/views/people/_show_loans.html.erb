@@ -1,0 +1,40 @@
+<div class="people_loans" >
+	<% unless @youp == @person %>
+	<div align="right" >
+		<%= link_to image_tag('icons/cool/add.png', :height => 18, :border => 0) + "You owe #{him(@person) rescue 'him/her' }", 
+			:controller => :loans, 
+			:action     => "new", 
+			:ower_id     => (@youp.id rescue 4242),
+			:creditor_id => (@person.id rescue 4243), 
+			:tags        => 'people_show_prova_tag, web', 
+			:description => '',
+			:align => 'right'
+		%>
+		<%= link_to image_tag('icons/cool/add.png', :height => 18, :border => 0) + "#{he(@person) rescue 'he/she' } owns you", 
+			:controller => :loans, 
+			:action     => "new", 
+			:ower_id     => (@person.id rescue 4232),
+			:creditor_id => (@youp.id rescue 4233), 
+			:tags        => 'people_show_prova_tag, web', 
+			:description => '',
+			:align => 'right'
+		%>
+		</div>
+	<% end %>
+	<ul>
+	<% if @debtor_loans.size > 0 %>
+		<li><b class='loan_debt' >Debts</b>
+			<% @debtor_loans.each { |loan| %>
+				<li>
+					<%= render :partial => 'loans/fancy', :locals => { :loan => loan } rescue "Problemi col parziale dei commenti: #{$!}" %>
+				</li>
+			<% } %>
+	<% end %>
+		
+	<% if @creditor_loans.size > 0 %>
+		<li><b class='loan_credit' >Credits</b>:	
+	<% @creditor_loans.each { |loan| %><li>
+		<%= render :partial => 'loans/fancy', :locals => { :loan => loan } rescue "Problemi col parziale dei commenti: #{$!}" %>
+	</li><% }%>
+	<% end %>
+</div>

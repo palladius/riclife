@@ -1,0 +1,26 @@
+<h1>Bella li vediamo i tuoi contatti</h1>
+
+<p>
+	Figata: http://github.com/mislav/contacts
+
+<p>
+	
+<%= 
+	urls = ['http://riclife.local/site/gcontacts', 
+			'https://riclife.palladius.eu/site/gcontacts', 
+	]
+	urls.map do |url|
+		link_to "Google Api Key (devi prima averlo registrato pero'): #{url} <br/>", Contacts::Google.authentication_url(url)
+	end
+%>
+
+<h2>gente</h2>
+
+<%=
+	gmail = Contacts::Google.new('palladiusbonton@gmail.com', params[:token]) rescue "Error to retrieve contacts... #{$!}"
+	contacts = gmail.contacts rescue "Ok gmail ma probl with contacts: #{$!}"
+#-> [ ['Fitzgerald', 'fubar@gmail.com', 'fubar@example.com'],
+#      ['William Paginate', 'will.paginate@gmail.com'], ...
+#      ]
+
+%>

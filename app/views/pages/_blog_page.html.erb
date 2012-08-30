@@ -1,0 +1,32 @@
+<%
+	def can_edit? 
+		true
+	end
+	
+	#author = page.person_id rescue 'asd'
+	author = transform_text_wiki_style( "{Person;#{page.person_id}}" )
+
+%>
+<h2>
+	<%= link_to(h(page.title), page ) rescue "Title TBD Err: #{$!}" %>
+	<%= magic_links(page,'ud') %>
+</h2>
+<p class='page_tags'>
+	<span class='tags'>
+	<%=  render_tags(page) %> 
+	</span>
+<p class='page_info'>
+	<small>
+	by 
+	<span class='person'>
+		<%= author %>
+	</span> ,
+	<%=time_ago_in_words(page.updated_at) %> ago
+	</small>
+</p>
+<p class='page header'>
+	<%= transform_text_wiki_style page.header %>
+</p>
+<p class='page body'>
+	<%= transform_text_wiki_style page.body %>
+</p>

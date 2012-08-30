@@ -1,0 +1,9 @@
+<% 
+	tags = @all_weighted_tags || [['boh', 42]] 
+	@cloud_min_cardinality ||= 2
+%>
+<div class='tags_cloud' >
+	<%= tags.map{|tag,size| 
+		render_tag(tag,size) if size >= @cloud_min_cardinality
+	}.join( ' ') %>
+</div>

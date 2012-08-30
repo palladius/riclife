@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:iCalendar-Ruby-amanhaus-riccardo
+BEGIN:VEVENT
+SEQUENCE:0
+DTEND:210000
+UID:2009-11-25T14:52:08+00:00_613707588@slartibartfast.heanet.ie
+DESCRIPTION:TODO mettici la vera descrizione..
+SUMMARY:Roba a manhaus riccardo
+DTSTART:233500
+DTSTAMP:20091125T145208
+END:VEVENT
+BEGIN:VEVENT
+SEQUENCE:0
+DTEND:210000
+UID:2009-11-25T14:52:08+00:00_226808990@slartibartfast.heanet.ie
+DESCRIPTION:TODO mettici la vera descrizione..
+SUMMARY:''Cheap OneEscape Party '' Foo Ric2 ical_controller::show statico m
+ ettici eventi veri (comp.name)
+DTSTART:225400
+DTSTAMP:20091125T145208
+END:VEVENT
+END:VCALENDAR

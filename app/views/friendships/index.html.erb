@@ -1,0 +1,40 @@
+<%#= friendship( :partial => "notes/quick_add" ) rescue "Comment Err: #{h( $!.to_s).pre}"%>
+<h1>Friendships Index</h1>
+<% if anonymous? %>
+	<%= render :partial => "users/error_login_snip", :locals => { :msg => 'Youre not allowed to see these wonderful friendships. Do a login, dude!'} %>
+<% else %>
+	<%= link_to( 'New Friendship', new_friendship_path) if can_write?('friendships') %>
+	
+<h2>Ultimi inseriti</h2>friendships
+<table>
+  <tr>
+    <th width='50' >Opts</th>
+    <th>Persons</th>
+    <th> <%= image_tag( 'icons/stars/yellow.png', :height => 15)%> Tags </th>
+    <th>Reciprocated</th>
+    <th>Notes</th>	
+  </tr>
+<% @friendships.each do |friendship|  %>
+	  <tr>
+		<td>
+			<%= magic_links(friendship,'crud') %>
+		</td>	
+	    <td><%= to_html(friendship) %></td>
+	    <td>
+			<%= render :partial => "tags/link",  :locals => { :tags => friendship.tags } %>
+		</td>
+	    <td>
+			<%= reciprocated_column(friendship) %>
+		</td>
+	    <td>
+			<%= h friendship.notes %>
+		</td>
+
+		
+		
+	  </tr>
+<% end %>
+</table>
+<br />
+<% end %>
+

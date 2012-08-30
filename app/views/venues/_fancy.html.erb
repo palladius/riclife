@@ -1,0 +1,15 @@
+<span class="venue">
+	<% if venue %>
+	
+	<%= "ERORE!!! VENUE NON ESISTE" unless venue %>
+  <%#= image_tag('models/venue.png', :height => 15) %>
+<%#= photo_name_column(venue, 15, 'icon_path') %>
+	<%= image_tag('gmaps/valigetta.png', :height => 25) if type == 'work' %>
+	<%= image_tag('gmaps/house2.png', :height => 25) if type == 'home' %>
+  <%= icon_magic(venue, 'icon_path', 20, :link => venue)  %>
+  <%= link_to( action_icon('edit'), { :action => "edit", :id => venue } )  %>
+  <%= link_to( venue, venue )%>
+<% else %>
+ <i class='error'>none</i>
+<% end %>
+</span>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  person_id: 1
+  app_id: 1
+  uid: MyString
+  description: MyText
+  validated: false
+
+two:
+  person_id: 1
+  app_id: 1
+  uid: MyString
+  description: MyText
+  validated: false

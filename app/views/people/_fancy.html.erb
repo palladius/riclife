@@ -1,0 +1,9 @@
+<span class="person">
+  <%= photo_name_column(person, (defined?(icon_size) ? icon_size : 18)) rescue 'err fotonamecol' %>
+  <%= link_to(action_icon('edit'), {:controller => "people", :action => "edit", :id => person } ) rescue 'err edit link' %>
+  <%= link_to( person, person, {:action => 'edit' } ) rescue 'err edit bis' %>
+  <%#= 	link_to("Mput", { :action => "edit", :id => person }, :method => :put ) %>
+  <%#= 	link_to("MPopup", { :action => "edit", :id => person }, :popup => true ) %>
+  <%#= 	link_to("Edit vegnu", {:controller => "venues", :action => "edit", :id => person.venue }, :method => :put) if person.venue %>
+
+</span>

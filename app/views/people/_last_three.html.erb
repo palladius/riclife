@@ -1,0 +1,13 @@
+<%
+	@max = 12
+	@last_people = Person.active.find(:all, :order => 'updated_at DESC', :limit => @max )
+%>
+<div class='last_three' >
+	<small>Last <%=@max%> people:
+	<% @last_people.each{|person| %>
+		<%#= link_to(person.abbreviated_name,person)%>
+		<%= fancy_name_column(person) rescue "FancyNameColumnErr(#{$!})"%>
+		<%#= render :partial => "people/fancy" , :person => person %>
+	<% } %>
+	</small>
+</div>

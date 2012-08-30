@@ -1,0 +1,30 @@
+<h1>Listing sport_activities</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Duration</th>
+    <th>Calories</th>
+    <th>Activity</th>
+    <th>Date</th>
+  </tr>
+
+<% @sport_activities.each do |sport_activity| %>
+  <tr>
+    <td><%=h sport_activity.name %></td>
+    <td><%=h sport_activity.description %></td>
+    <td><%=h sport_activity.duration %></td>
+    <td><%=h sport_activity.calories %></td>
+    <td><%=h sport_activity.activity %></td>
+    <td><%=h sport_activity.date     %></td>
+    <td><%= link_to 'Show', sport_activity %></td>
+    <td><%= link_to 'Edit', edit_sport_activity_path(sport_activity) %></td>
+    <td><%= link_to 'Destroy', sport_activity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sport_activity', new_sport_activity_path %>

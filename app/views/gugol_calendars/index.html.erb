@@ -1,0 +1,30 @@
+<h1>Listing gugol_calendars</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Color</th>
+    <th>User</th>
+    <th>Pass</th>
+    <th>Calname</th>
+  </tr>
+
+<% @gugol_calendars.each do |gugol_calendar| %>
+  <tr>
+    <td><%=h gugol_calendar.name %></td>
+    <td><%=h gugol_calendar.description %></td>
+    <td><%=h gugol_calendar.color %></td>
+    <td><%=h gugol_calendar.user %></td>
+    <td><%=h gugol_calendar.pass %></td>
+    <td><%=h gugol_calendar.calname %></td>
+    <td><%= link_to 'Show', gugol_calendar %></td>
+    <td><%= link_to 'Edit', edit_gugol_calendar_path(gugol_calendar) %></td>
+    <td><%= link_to 'Destroy', gugol_calendar, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New gugol_calendar', new_gugol_calendar_path %>

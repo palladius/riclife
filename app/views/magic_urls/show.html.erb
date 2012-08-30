@@ -1,0 +1,33 @@
+<p>
+  <b>Url:</b>
+  <%=h @magic_url.url %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @magic_url.description %>
+</p>
+
+<p>
+  <b>Privacy:</b>
+  <%=h @magic_url.privacy %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @magic_url.user_id %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @magic_url.active %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @magic_url.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_magic_url_path(@magic_url) %> |
+<%= link_to 'Back', magic_urls_path %>

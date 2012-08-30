@@ -1,0 +1,11 @@
+<% string_tags = defined?(tags) ? tags : "_undefined_TAGS_" 
+	my_tags = sminuzza_tags(tags)
+%>
+<span class='tag'>
+	<small class='tag' >
+	<%= image_tag('models/tag.png', :height => 12 ) %>
+	<% my_tags.each {|tag| %> 
+		<a href="/tags/<%= tag %>" border='0' ><tt class='tag' ><%= tag %></tt></a>
+	<%}%> 
+	</small>
+</div>

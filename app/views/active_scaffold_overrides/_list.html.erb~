@@ -1,0 +1,2 @@
+<h1>Ric Override X tutti</h1>
+<%#= render :super %>

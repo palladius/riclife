@@ -1,0 +1,15 @@
+	Your friends (TBD in friendship model, non qui)
+<p>You love:
+	<b><%= 
+		follows = Friendship.find_all_by_followed_id(@person.id).map{|p| p.person} rescue nil
+		#follows.map{|p| link_to p,p}.join(', ') rescue "Problemi col parziale dei commenti: #{$!}"
+		Friendship.find_all_by_followed_id(@person.id).map{|p| p.person}.map{|p| link_to p,p}.join(', ') rescue "Problemi col parziale dei commenti: #{$!}"
+	%></b>
+<p>You're loved by:
+	<b><%= 
+		followers = Friendship.find_all_by_person_id(@person.id).map{|p| p.followed } rescue nil # [ "Eccezione #{$!}"]
+		#followers = Friendship.followerz(@person) #.map{|p| p.followed }
+		followers.map{|p| link_to p,p}.join(', ')   if followers
+	%></b>
+<p>Friends:
+	<b><%= (follows & followers).map{|p| link_to p,p}.join(', ')  %></b>

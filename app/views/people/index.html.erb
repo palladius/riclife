@@ -1,0 +1,42 @@
+<%#= render( :partial => "notes/quick_add" ) rescue "Comment Err: #{h( $!.to_s).pre}"%>
+<h1>People Index</h1>
+<% if anonymous? %>
+	<%= render :partial => "users/error_login_snip", :locals => { :msg => 'Youre not allowed to see these wonderful people. Do a login, dude!'} %>
+<% else %>
+
+	<%= link_to( 'New person', new_person_path) if can_write?('people') %>
+	
+<h2>Ultimi inseriti</h2>
+<table>
+  <tr>
+    <th width='50' >Opts</th>
+    <th>Person</th>
+    <th> <%= image_tag( 'icons/stars/yellow.png', :height => 15)%> Star </th>
+    <th>Male</th>
+    <th></th>
+    <th>Virtual</th>
+    <th>Tags</th>
+  </tr>
+<% @last_people.each do |person|  %>
+	  <tr>
+		<td>
+			<%= magic_links(person,'crud') %>
+		</td>	
+	    <td><%= name_surname_column(person) %></td>
+<!--
+		<td><%= h( person.birthday ) if person.birthday? %></td>
+	    <td class='venue'><small class='small venue'><%= link_to(person.venue,person.venue) unless person.venue.nil? %></small></td>
+	    <td class='venue'><small><%= link_to(person.work_venue,person.work_venue) unless person.work_venue.nil? %></small></td>
+-->
+	    <td><%= togglable_checkbox(person,'starred', starred_column(person) ) %></td>
+	    <td><%= togglable_checkbox(person,'male','Maschio') %></td>
+	    <td><%= togglable_checkbox(person,'virtual') %></td>
+	    <td>
+			<%= render :partial => "tags/link",  :locals => { :tags => person.tags } %>
+		</td>
+	  </tr>
+<% end %>
+</table>
+<br />
+<% end %>
+

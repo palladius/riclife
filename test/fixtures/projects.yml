@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  date_due: 2009-11-29
+  active: false
+  todo: false
+  person_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  date_due: 2009-11-29
+  active: false
+  todo: false
+  person_id: 1

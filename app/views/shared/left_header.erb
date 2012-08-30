@@ -1,0 +1,12 @@
+<% 
+  user = get_user 
+  person = get_person
+%>
+<div id='nav' class="left_header" width="100" >
+  <%= render :partial => "users/login_snip" -%>
+  <%= render :partial => "tags/cloud" -%>
+  <%= header_models('Cool models', ApplicationHelper::HEADER_MODELS) %>
+  <%= multi_header_links(ApplicationHelper::MULTI_MENU) %>
+<hr/>
+  <%= header_models('Minor models', ApplicationHelper::MINOR_MODELS) %>
+</div>

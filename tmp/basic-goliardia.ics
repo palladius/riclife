@@ -1,0 +1,843 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Goliardia
+X-WR-TIMEZONE:Europe/Rome
+X-WR-CALDESC:Gli eventi goliardici\, by Palladius.\nProviamo a mantenere un
+  calendario di Google che poi magari aggiungo al mio sito\, che vada a sost
+ ituire/integrare quello attuale?!?\nParliamone. Intanto aiutatemi ad aggiun
+ gere admin (almeno uno per città).\nC'è un altro calendario ma è chiuso a t
+ utti e non so chi cavolo lo gestisca\, non ho nemmeno modo di madnargli una
+  mail al tipo!!!
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+X-LIC-LOCATION:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20091010
+DTEND;VALUE=DATE:20091011
+DTSTAMP:20091126T005343Z
+UID:lhkcvrgslhn9n2i9o6jha3p664@google.com
+CREATED:20090924T153839Z
+DESCRIPTION:
+LAST-MODIFIED:20091002T080743Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Palladius a Bologna
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VFREEBUSY
+DTSTART;TZID=Europe/Rome:20280428T143000
+DTEND;TZID=Europe/Rome:20280428T153000
+RRULE:FREQ=YEARLY;BYMONTH=4
+DTSTAMP:20091126T005344Z
+UID:6e78a6248ed387a8e074123d654df89e9d7827bd@google.com
+ATTENDEE;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.go
+ ogle.com
+SUMMARY:Busy
+END:VFREEBUSY
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20090425
+DTEND;VALUE=DATE:20090426
+DTSTAMP:20091126T005344Z
+UID:ge10aeke0ughs8godni3bdl8fc@google.com
+CREATED:20090413T172531Z
+DESCRIPTION:
+LAST-MODIFIED:20090413T172531Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Perugia!
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20090703
+DTEND;VALUE=DATE:20090706
+DTSTAMP:20091126T005344Z
+UID:26q08r708fdqi20272mkdvr4sc@google.com
+CREATED:20090205T112304Z
+DESCRIPTION:http://www.strasbourg100-121.net/\n\nSorry for my German\, Ital
+ ian and Spanish\, I hope there isn't to many mistakes !!\n\n \nBonjour à to
+ us\,\nc’est avec la plus grande joie que l’association Strasbourg 100-121 v
+ ous invite à vous joindre aux Faluchards de France pour célèbrer le 121eme 
+ anniversaire de la Faluche et le 100eme anniversaire de la Faluche Alsacien
+ ne.\nCet évènement aura lieu à Strasbourg du 3 au 5 juillet 2009\, vous tro
+ uverez toutes les informations nécessaires ainsi que le formulaire d’inscri
+ ption sur notre site Internet : www.strasbourg100-121.net\nJe reste à votre
+  disposition pour répondre à vos questions\, n’hésitez pas !\nA bientôt !\n
+  \nMathilde Parsy\n\nCM International pour Strasbourg 100-121\n\n \nCiao a 
+ tutto\,\nè con la più grande gioia che l'associazione Strasbourg 100-121 l'
+ invita si ha associ a nel Faluchards della Francia per celebrare il 121comp
+ leanno del Faluche ed il 100 compleanno dell'Alsaziano di Faluche.\nQuesto 
+ evento prenderà il luogo ha Strasbourgo di luglio 2009 3 a 5\, lei troverà 
+ tutte le informazioni necessarie così come la forma di iscrizione sul nostr
+ o luogo di Internet : www.strasbourg100-121.net\nRimango a la sua disposizi
+ one per rispondere a le sue domande\, non esiti!\nA presto!\n \n Mathilde P
+ arsy\nCM International pour Strasbourg 100-121\n\n \nHello everybody\,\nit 
+ is with the biggest enjoyment that the association Strasbourg 100-121 invit
+ es you to join the Faluchards of France for the 121st anniversary of the Fa
+ luche and the 100th anniversary of the alsacian Faluche.\nThis evenement wi
+ ll take place in Strasbourg from 3 to 5 July 2009\, you will find all the i
+ nformations as well as the form of registration on our web site: www.strasb
+ ourg100-121.net\nI stay at your disposition for every question you can thin
+ k of\, don’t hesitate !\nSee you soon !  \n \nMathilde Parsy\n\nCM Internat
+ ional pour Strasbourg 100-121\n\n \n \nBuenos días a todos\,\nestá con la a
+ legría más grande que la asociación Estrasburgo 100-121 le invita a juntarl
+ e a Faluchards de Francia para celebrer el 121 aniversario de Faluche y el 
+ 100 aniversario de Faluche Alsacienne.\nEste evenement se efectuará in Estr
+ asburgo del 3 al 5 de julio 2009\, usted encontrará todas las informaciones
+  necessaires así como el formulario de inscripción sobre nuestro sitio Inte
+ rnet: www.strasbourg100-121.net\n¡ Me quedo a su disposición para reaovar a
+  sus cuestiones\, no hesitez!\n¡ Hasta pronto!\n \nMathilde Parsy\n\nCM Int
+ ernational pour Strasbourg 100-121\n\n \nGuten Tag alle\,\nmit der größten 
+ Freude\, lädt Ihnen der Verein Straßburg 100-121 ein\, zu den 121 Geburtsta
+ g von die Faluche und den 100 Geburtstag von die Elsasische Faluche.\nDiese
+ r evenement wird in Straßburg vom 3. bis 5. Juli 2009 stattfinden\, alle ne
+ cessaires Informationen finden Sie\, sowie das Anmeldeformular\, auf unsere
+ r Internet-Seite: www.strasbourg100-121.net\nIch bleibe in Ihre Verfügung\,
+  um Ihre Fragen zu beantworten.\nBis bald!\n \nMathilde Parsy\n\nCM Interna
+ tional pour Strasbourg 100-121\n\n \n \n \n
+LAST-MODIFIED:20090331T150742Z
+LOCATION:Strasbourg\, Francia
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Feluchards
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20060208
+DTEND;VALUE=DATE:20060209
+RRULE:FREQ=YEARLY;BYMONTH=2
+DTSTAMP:20091126T005344Z
+UID:0smfd75l2u4c075sipa2r5qrgg@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20080507T160740Z
+LAST-MODIFIED:20090114T230336Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Padova!
+TRANSP:TRANSPARENT
+CATEGORIES:http://schemas.google.com/g/2005#event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19970127
+DTEND;VALUE=DATE:19970128
+RRULE:FREQ=YEARLY;BYMONTH=1
+DTSTAMP:20091126T005344Z
+UID:4n1f47s2vh7ha0tg96s4chtsbk@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20080505T135141Z
+DESCRIPTION:27/1/1997
+LAST-MODIFIED:20090105T132928Z
+LOCATION:via del Pratello (ex sede Nettuno)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Compleanno processo Palladius :)
+TRANSP:TRANSPARENT
+CATEGORIES:http://schemas.google.com/g/2005#event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081107T200000Z
+DTEND:20081107T210000Z
+DTSTAMP:20091126T005344Z
+UID:eiisjfuvr245apjc51tmr3feso@google.com
+CREATED:20081015T134853Z
+LAST-MODIFIED:20081015T134853Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Montecristo
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081014T213000Z
+DTEND:20081014T223000Z
+DTSTAMP:20091126T005344Z
+UID:2jk8581a99j6cqhgq5ncupqc48@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20081010T153628Z
+LAST-MODIFIED:20081010T153645Z
+LOCATION:Bologna
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Abdicazione Gran Maestro
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081009T190000Z
+DTEND:20081009T213000Z
+DTSTAMP:20091126T005344Z
+UID:nsrd28vhpjkigb95achiucc56c@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20080918T173318Z
+DESCRIPTION:Cari Fratelli Cretini\,\n\nho comunicato col Presidente\, con N
+ aser\, con Cipolla e con Unus a proposito della cena di apertura.\nVisto il
+  delicato caso umano di Palladio che invoca di posticipare la cena per cons
+ entirgli la presenza\, il Consiglio Direttivo (l'ho creato ora\, vi piace?9
+  ottobre) delibera che la cena in oggetto si terrà nella giornata di GIOVED
+ I' 9 OTTOBRE presso la sede storica in Cirenaica (il solito Vito\, per inte
+ nderci).\nAttendo la adesioni\, dopodichè il Presidente svolgerà la sua fun
+ zione primaria\, cioè provvederà alla prenotazione...\nSaluti cretini a tut
+ ti.\n\nALADANO (Vicepresidente)\n\nPresenti oper ora:\n- Aladano\n- Fraffo\
+ n- Venium\n- Palladius
+LAST-MODIFIED:20081009T071840Z
+LOCATION:da Vito\, zona massarenti\, Bologna
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Cretini
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081018T190000Z
+DTEND:20081018T220000Z
+DTSTAMP:20091126T005344Z
+UID:vjkme449ncbeh7o1bvksh4nnrc@google.com
+CREATED:20081007T180430Z
+DESCRIPTION:La cosa non è ancora ufficiale e sicura\, ma è molto probabile.
+ \nPenso di fare una festa a Villa Serena\, con DJ Gigi.
+LAST-MODIFIED:20081007T180430Z
+LOCATION:Villa Serena?\, Bologna
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Festa Addio al Bolognato
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081017T190000Z
+DTEND:20081017T200000Z
+DTSTAMP:20091126T005344Z
+UID:pa6r6h7fohnq93adfdjt034c7s@google.com
+CREATED:20081001T114415Z
+LAST-MODIFIED:20081001T114415Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Slavonia
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080926T190000Z
+DTEND:20080926T200000Z
+DTSTAMP:20091126T005344Z
+UID:8fmqr6kfa8cbasfgfp7hdtk3pg@google.com
+CREATED:20080922T190821Z
+LAST-MODIFIED:20080922T190821Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Ozieri
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081108
+DTEND;VALUE=DATE:20081109
+DTSTAMP:20091126T005344Z
+UID:7tcapt7bo9i73mqetuu4r3jsjk@google.com
+CREATED:20080327T141824Z
+DESCRIPTION:[RIC: tu trovi quest'email e il pdf relativo nel tuo GMAIL]\n\n
+ Ciao\,\n\nSiamo lieti di invitarvi alla quarta europeo Banquet Sabato\, 8 n
+ ovembre 2008 a Strasburgo.\nIl Banchetto europea di riunire le diverse trad
+ izioni studenti intorno allo stesso pasto nello stesso luogo.\nCi sono stat
+ e 200 l'anno scorso sotto l'alto patronato del Console Generale d'Austria a
+ l Palais du Rhin\, saremo ancora di più questo anno!\nFrancese\, belga\, it
+ aliano\, tedesco\, svizzero\, il Lussemburgo\, l'Austria ha ottenuto insiem
+ e\, quest 'anno ci saranno ancora di più le nazionalità.\n\nPer ulteriori i
+ nformazioni\, ecco il sito web dell'Agenzia Europea Banquet /\nHttp: / / fa
+ luchards67.ifrance.com /\n\nAllo stesso tempo vorremmo istituire una "golia
+ rd". La spiegazione è messo in questo pezzo allegata.\n\nCordiali saluti\,\
+ n\nEmmanuel VASMAIRE\nVulgo Manou\n\n----------------\n\nHello\,\n\nWe are 
+ pleased to invite you to the fourth European Banquet Saturday\, November 8\
+ , 2008 in Strasbourg.\nThe European Banquet to bring together the different
+  traditions students around the same meal in same place.\nWe were 200 last 
+ year under the high patronage of the Consul General of Austria at the Palai
+ s du Rhin\, we will be even more this year!\nFrench\, Belgian\, Italian\, G
+ erman\, Swiss\, Luxembourg\, Austria got together\, this year there will be
+  even more nationalities.\n\nFor more information\, here's the website of t
+ he European Banquet /\nHttp://faluchards67.ifrance.com/\n\nAt the same time
+  we would like to establish a "goliard". The explanation is put into this p
+ iece attached.\n\nSincerely\,\n\nEmmanuel VASMAIRE\nAlias Manou\n\n--------
+ - mail di 20 sett 08:\n\nCari amici delle tradizioni degli studente\,\n\nL'
+ associazione del Faluchards Alsatian ed il Robert Schumann Argentorata li i
+ nvitano al quarto banchetto europeo.\n\nAvverrà a Strasburgo su novembre i 
+ 8 di 2008.\n\nTroverete tutte le informazioni necessarie su questo Web site
+ : http://www.banquet-europe.eu.\n\nLe iscrizioni saranno aperte in linea fi
+ n da il 1° settembre.\n\n \n\nil comitee di organizzazione\n\nrisponda a pr
+ ego : contact@banquet-europe.eu\n\n\nDear friends of the students tradition
+ s\,\n\nThe Association of the Alsatian Faluchards and the Robert Schumann A
+ rgentorata invite you to the fourth European banquet.\nIt will take place i
+ n Strasbourg on November the 8 in 2008.\nYou will find all needed informati
+ ons on this website: http://www.banquet-europe.eu.\nThe inscriptions will b
+ e open on line on September the first.\nLet us know if you will be among us
+ .\n\nThe organization comitee\nPlease answer: contact@banquet-europe.eu
+LAST-MODIFIED:20080922T081134Z
+LOCATION:Strasburgo
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Faluchards a Strasburgo
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:19720207
+DTEND;VALUE=DATE:19720208
+RRULE:FREQ=YEARLY;BYMONTH=2
+DTSTAMP:20091126T005344Z
+UID:idt4p9pg0iharnrksau10su59g@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20080505T135153Z
+DESCRIPTION:Nato il 7 feb 1972
+LAST-MODIFIED:20080922T073415Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Compleanno GBM ('72)
+TRANSP:OPAQUE
+CATEGORIES:http://schemas.google.com/g/2005#event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080519
+DTEND;VALUE=DATE:20080520
+DTSTAMP:20091126T005344Z
+UID:bnhaq009goi6ji6427to3qrl1c@google.com
+CREATED:20080518T204945Z
+DESCRIPTION:Immagino che questa notizia abbia scarsa rilevanza pratica\, ma
+  è una prova\, sicchè non rompete. \;-P\n\nRic sei bellissimo e giallissimo
+  (va bene così?).\n\nFaby.
+LAST-MODIFIED:20080918T123813Z
+LOCATION:Torino
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Compleanno Inconsapevole
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20020428
+DTEND;VALUE=DATE:20020429
+RRULE:FREQ=YEARLY;WKST=MO
+DTSTAMP:20091126T005344Z
+UID:j8uu3nc5dnutucu19jaasicohs@google.com
+CREATED:20080430T075003Z
+DESCRIPTION:Il 28 aprile 2002 viene varato il sito www.goliardia.it mentre 
+ Pal aspetta di andare ad Amsterdam con l'amico Gigi che però lo pacca.\nLui
+  allora si mette a lavorare a questo sito in ASP+Access!!!\n\nIl resto è st
+ oria...
+LAST-MODIFIED:20080918T121643Z
+LOCATION:Argenta (FE)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Compleanno sito Palladius
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081011T190000Z
+DTEND:20081011T200000Z
+DTSTAMP:20091126T005344Z
+UID:qreqe2hasq2cgir2lnava3huk8@google.com
+CREATED:20080914T172345Z
+LAST-MODIFIED:20080914T172345Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Scorpionato
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20081004T190000Z
+DTEND:20081004T200000Z
+DTSTAMP:20091126T005344Z
+UID:5ntobaeb046savb7euchlg9p0g@google.com
+CREATED:20080914T172316Z
+LAST-MODIFIED:20080914T172324Z
+LOCATION:Torino
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Compleanno dell'Abbazia de li Frati Gaudenti
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20070628T190000Z
+DTEND:20070628T193000Z
+DTSTAMP:20091126T005344Z
+UID:5i9inqh29sp917bu7medc4u0rs@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20071228T104152Z
+DESCRIPTION:Ci sono andato
+LAST-MODIFIED:20080911T091845Z
+LOCATION:zona Due Madonne\, Bologna
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Frati
+TRANSP:OPAQUE
+CATEGORIES:http://schemas.google.com/g/2005#event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20070707
+DTEND;VALUE=DATE:20070708
+DTSTAMP:20091126T005344Z
+UID:tjvh1o5q1b8dmqmduashf1c03g@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20071228T103933Z
+LAST-MODIFIED:20080911T091601Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena 3PM
+TRANSP:TRANSPARENT
+CATEGORIES:http://schemas.google.com/g/2005#event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20070630
+DTEND;VALUE=DATE:20070701
+DTSTAMP:20091126T005344Z
+UID:ieamtoavhneptk7j398ud3kid0@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20071228T103917Z
+LAST-MODIFIED:20080911T091548Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Melangola
+TRANSP:TRANSPARENT
+CATEGORIES:http://schemas.google.com/g/2005#event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20070602
+DTEND;VALUE=DATE:20070603
+DTSTAMP:20091126T005344Z
+UID:iqp9u66od940c9o1nj2ps5i98k@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20080507T160605Z
+LAST-MODIFIED:20080911T091123Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Camerino?
+TRANSP:TRANSPARENT
+CATEGORIES:http://schemas.google.com/g/2005#event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081113
+DTEND;VALUE=DATE:20081116
+DTSTAMP:20091126T005344Z
+UID:dl5l7km20ml1p7qdc555hs0ie0@google.com
+CREATED:20080907T211758Z
+DESCRIPTION:Ritrovo per gli esteri nel Cortile del Bo dal venerdì pomeriggi
+ o\, seguirà il consueto delirio.
+LAST-MODIFIED:20080907T211856Z
+LOCATION:Padova
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Feriae Matricularum Patavine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080906T190000Z
+DTEND:20080906T200000Z
+DTSTAMP:20091126T005344Z
+UID:naqq9hg7gbdtc35h7e3j8q9gr0@google.com
+CREATED:20080820T135719Z
+DESCRIPTION:rist La Sosta\ntema libero\n\nCena di compleanno del Vascello. 
+  Ulteriori indicazioni saranno presenti sugli inviti.
+LAST-MODIFIED:20080905T001427Z
+LOCATION:via due madonne 55\, bologna
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Vascello
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080920
+DTEND;VALUE=DATE:20080921
+DTSTAMP:20091126T005344Z
+UID:0t74f2ii5dnh0c5uipf84pt3hk@google.com
+CREATED:20080901T161808Z
+LAST-MODIFIED:20080901T161808Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Merlin (50enario) @ Torino
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080712T180000Z
+DTEND:20080712T190000Z
+DTSTAMP:20091126T005344Z
+UID:k1ohffjdfvcqgvgq2ta25k05rs@google.com
+CREATED:20080614T141925Z
+DESCRIPTION:Cena di chiusura anno accademico della Sacra atque Temibilis Vo
+ la del Vampiro. \nAs usual\, la cena sarà low cost.\nI succhiasangue vi att
+ endono impazienti \;-)\n\nPresenti:\n- Palladius
+LAST-MODIFIED:20080710T141345Z
+LOCATION:Torino
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Cena Vampiri
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080706T180000Z
+DTEND:20080706T220000Z
+DTSTAMP:20091126T005344Z
+UID:g3u6am1uodq015aaiks95aiv3o@google.com
+CREATED:20080612T132230Z
+DESCRIPTION:Tenis Club dell'aeroporto.\nRSVP: 328-3593392 oppure 392-812272
+ 5
+LAST-MODIFIED:20080705T073816Z
+LOCATION:via dell'Aeroporto\, Bologna
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:VII Aquatica Neptunalia
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080704T190000Z
+DTEND:20080704T200000Z
+DTSTAMP:20091126T005344Z
+UID:gtrqkqq4j733ehdlkd7h16rpag@google.com
+CREATED:20080622T134929Z
+DESCRIPTION:Cena di chiusura anno accademico della Balla dell'Oca.\nFuori p
+ orta San Mamolo.
+LAST-MODIFIED:20080629T105957Z
+LOCATION:via di Roncrio 30\, Bologna
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:S.O.C.M.E.L. Indipendence Day
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080712T180000Z
+DTEND:20080712T190000Z
+DTSTAMP:20091126T005344Z
+UID:tnqv6po77sv182d7kv8e67qv14@google.com
+CREATED:20080622T135123Z
+DESCRIPTION:Cena di chiusura del Sovrano Ordine Tre Palle Meridionali.
+LAST-MODIFIED:20080628T201156Z
+LOCATION:Bologna
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Cena 3 Palle Meridionali
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080704T163000Z
+DTEND:20080704T173000Z
+DTSTAMP:20091126T005344Z
+UID:k829cretg7idrjuhpiul1js8qk@google.com
+CREATED:20080625T111247Z
+DESCRIPTION:Ritrovo alle 1730 al Carmine\, poi partenza per i colli...
+LAST-MODIFIED:20080625T111317Z
+LOCATION:Padova
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Giarda
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080704T190000Z
+DTEND:20080704T200000Z
+DTSTAMP:20091126T005344Z
+UID:kavr5m91oiaat2ra6p5d0sv630@google.com
+CREATED:20080622T134331Z
+DESCRIPTION:Cena di compleanno dell'Arcana Vola Sacerdotum Druidarum.\nStra
+ ap si leva dalle palle? Venite a scoprirlo \;)
+LAST-MODIFIED:20080623T071517Z
+LOCATION:Torino
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Cena Druidi
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080628T190000Z
+DTEND:20080628T200000Z
+DTSTAMP:20091126T005344Z
+UID:jg93ect0het1mp1097ullajejg@google.com
+CREATED:20080612T132139Z
+LAST-MODIFIED:20080623T071449Z
+LOCATION:Bologna
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena chiusura (Parochia Veneta)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080629T190000Z
+DTEND:20080629T200000Z
+DTSTAMP:20091126T005344Z
+UID:p67jpln4sr9fjrtm278vpfc5s4@google.com
+CREATED:20080612T132156Z
+LAST-MODIFIED:20080623T071427Z
+LOCATION:Monzuno
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Toga Party - Bolognese
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080627T190000Z
+DTEND:20080627T200000Z
+DTSTAMP:20091126T005344Z
+UID:6aqojjp0eqnce587n7bv4dbmes@google.com
+CREATED:20080622T140216Z
+DESCRIPTION:
+LAST-MODIFIED:20080622T140216Z
+LOCATION:Giardini Baraccano\, Bologna
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Concerto Gem Boy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20081017
+DTEND;VALUE=DATE:20081020
+DTSTAMP:20091126T005344Z
+UID:nkvbofm02otu7rehsv6n0a089g@google.com
+CREATED:20080622T135400Z
+DESCRIPTION:Festa delle matricole.
+LAST-MODIFIED:20080622T135400Z
+LOCATION:Palermo
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Feriae Matricularum a Palermo
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080912
+DTEND;VALUE=DATE:20080914
+DTSTAMP:20091126T005344Z
+UID:8q50a6c7icjgn9mn1det4pej2g@google.com
+CREATED:20080622T135234Z
+DESCRIPTION:Festa delle Matricole.
+LAST-MODIFIED:20080622T135234Z
+LOCATION:Milano
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Feriae Matricolarum Mediolani
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080622T190000Z
+DTEND:20080622T200000Z
+DTSTAMP:20091126T005344Z
+UID:kjc8oorcevorh4c63u25pol8f0@google.com
+CREATED:20080612T132112Z
+DESCRIPTION:tema: RED PASSION
+LAST-MODIFIED:20080619T153217Z
+LOCATION:via Fancelli 5\, Bologna
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena GBM
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080621
+DTEND;VALUE=DATE:20080622
+DTSTAMP:20091126T005344Z
+UID:u0bsd064vdgbsdfeliq7gnvpus@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20080616T105318Z
+LAST-MODIFIED:20080616T105341Z
+LOCATION:Perugia
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Grigliata Scorprionato
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080620T190000Z
+DTEND:20080620T213000Z
+DTSTAMP:20091126T005344Z
+UID:12h5tadrfpkp0rjidbkpvm2peg@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20080612T091942Z
+LAST-MODIFIED:20080612T092454Z
+LOCATION:Piazza martitri
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Cena Melangola
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080531T190000Z
+DTEND:20080531T200000Z
+DTSTAMP:20091126T005344Z
+UID:rv3356g69nmt70pskjoe29k68k@google.com
+CREATED:20080519T145825Z
+LAST-MODIFIED:20080519T145825Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena di Slavonia
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080606
+DTEND;VALUE=DATE:20080609
+DTSTAMP:20091126T005344Z
+UID:hdv40ukesd5gq581a1rspu36u8@google.com
+CREATED:20080518T125348Z
+LAST-MODIFIED:20080518T125348Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Perugia
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080613
+DTEND;VALUE=DATE:20080616
+DTSTAMP:20091126T005344Z
+UID:uq461n4fcucqb5bmjpkgfr507s@google.com
+CREATED:20080424T164739Z
+LAST-MODIFIED:20080424T164739Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Matricolari Torino
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080530T190000Z
+DTEND:20080530T200000Z
+DTSTAMP:20091126T005344Z
+UID:blm7oub66v526k376q46a2dvl8@google.com
+CREATED:20080417T151546Z
+LAST-MODIFIED:20080417T151546Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Slavonia
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080404
+DTEND;VALUE=DATE:20080406
+DTSTAMP:20091126T005344Z
+UID:ld2modqr0k5ubepla78gdjqmas@google.com
+CREATED:20080326T105702Z
+DESCRIPTION:Festa delle matricole a Firenze\, indetta da lo Sovrano Commend
+ evolissimo Ordine Goliardico di San Salvi.\n\nProgramma: fa fede l'invito c
+ artaceo.
+LAST-MODIFIED:20080326T105719Z
+LOCATION:Firenze
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Feriae Matricolarum a Firenze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080411
+DTEND;VALUE=DATE:20080414
+DTSTAMP:20091126T005344Z
+UID:9rg53rn4ib3rhbaumpfn41v1do@google.com
+CREATED:20080306T144112Z
+DESCRIPTION:
+LAST-MODIFIED:20080325T174217Z
+LOCATION:Parma
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Matriculari Parma!
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080524
+DTEND;VALUE=DATE:20080525
+DTSTAMP:20091126T005344Z
+UID:l2elqbcmnjcdsf2krbc0da1cgo@google.com
+CREATED:20080318T090257Z
+LAST-MODIFIED:20080318T090257Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Topa @Ozieri
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080516
+DTEND;VALUE=DATE:20080519
+DTSTAMP:20091126T005344Z
+UID:99d3sfgqp1v80jnpj9gqeb6g6k@google.com
+CREATED:20080306T144126Z
+LAST-MODIFIED:20080306T144126Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Feriae Matricolarum Bononiae
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080418T173000Z
+DTEND:20080420T183000Z
+DTSTAMP:20091126T005344Z
+UID:isia93ujvnug2r999dj312jcb8@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20080217T132512Z
+DESCRIPTION:
+LAST-MODIFIED:20080306T144058Z
+LOCATION:Ferrara
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Matricolari di Ferrara!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20080307T200000Z
+DTEND:20080307T220000Z
+DTSTAMP:20091126T005344Z
+UID:ep1ibcnvhl6uam24v57cbc989o@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Goliar
+ dia;X-NUM-GUESTS=0:mailto:maco7e2h8e4ka1stt1phreajpg@group.calendar.google.
+ com
+CREATED:20080225T183932Z
+DESCRIPTION:Ciao sono MelaPera\,\nla cena è il 07/03 alle 09:00 al Laghetto
+  del Rosario via rosario nr.14 (Bologna). \n\nAndiamo?!?
+LAST-MODIFIED:20080306T101550Z
+LOCATION:via rosario 14\, Bologna
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Cena melangola
+TRANSP:OPAQUE
+CATEGORIES:http://schemas.google.com/g/2005#event
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20080223
+DTEND;VALUE=DATE:20080224
+DTSTAMP:20091126T005344Z
+UID:oh9thn4qrspcskpoo7nr5ooqdo@google.com
+CREATED:20080302T114500Z
+DESCRIPTION:Cena del Gaudente Popolo della Sacra Atque Temibilis Vola del V
+ ampiro.\nCi prodigheremo un po' tutti/e affinchè venga una cosa carina.\nIo
+  in particolare \;)
+LAST-MODIFIED:20080302T114500Z
+LOCATION:Torino
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cena Vampiri!!
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

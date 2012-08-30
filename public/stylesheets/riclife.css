@@ -1,0 +1,129 @@
+/* 
+    Document   : main
+    Created on : 18-nov-2009, 1.20.31
+    Author     : riccardo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/*
+root { 
+    display: block;
+}
+*/
+
+
+/*
+.active-scaffold tr.unpublished td.amount-column {
+  background-color: red;
+}
+
+.active-scaffold tr.unpublished {
+  background-color: red;
+}
+
+.active-scaffold tr.published {
+  background-color: green;
+}
+*/
+.published, .active {
+  font-color: navy;
+ /* font-size:xx-large ; */
+}
+
+.unpublished , #unpublished, unpublished , .inactive, #inactive  {
+  background-color: gray;
+  font-size: xx-small;
+  color: maroon;
+}
+
+.male       {    color: #66F;}
+.female     {    color: #F88;}
+.unknownsex {    color: gray; }
+
+.active-scaffold tr.past td.amount-column {
+  background-color: red;
+}
+
+.active-scaffold tr.past {
+  background-color: red;
+   color: gray;
+}
+
+.active-scaffold tr.future {
+  background-color: green;
+   color: blue;
+}
+
+.note {
+    color: red;
+}
+
+.project {
+    color:maroon;
+}
+.event_type {
+    color: #faa;
+}
+.person {
+/*   
+	color:fuchsia; 
+	non colorare a meno che non scopri come overridare il colore di PERSON con MALE :-)
+*/
+}
+
+.user,
+.user a,
+.user-title,
+.user-title a,
+.user-header1 {
+	color: #060;
+	font: normal 100% Courier ;
+}
+/*
+.user {
+	font: normal 100% Courier ;
+}
+*/
+
+.address {
+	font-style:italic;
+	color: red;
+}
+
+.venue {
+	color: purple;
+	font-style:italic bolder;
+}
+
+.nickname {
+			color: teal;
+}
+
+.calendar {
+	color: #070; /* dark green */
+	font-style:italic bolder;
+}
+
+.event {
+	font-size: -2px;
+	/*font-color: blue; */
+	color: #070; /* dark green */
+}
+
+
+.summary {
+	/*  color: #070; dark green */
+	font-style: bold;
+}
+
+.tags {
+	background-color:  rgb(255,255,192);
+	font-size: xx-small;
+}
+

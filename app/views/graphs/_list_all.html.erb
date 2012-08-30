@@ -1,0 +1,13 @@
+<div class='graphs list_all' >
+  <%  RicGraph.find_all.each do |graph_name| %>
+	<p>
+		<b><%= graph_name.camelize %></b>:
+		<%= link_to( 'HTML/SVG' , '/graphs/'+graph_name ) %>
+		<a href='/graphs/<%= graph_name %>.html'>HTML</a>
+		<a href='/graphs/<%= graph_name %>.xml'>XML/SVG</a>
+		<a href='/graphs/<%= graph_name %>.png'>PNG</a>
+		<a href='/graphs/<%= graph_name %>.jpg'>JPeG</a>
+	</p>
+  <% end  %>
+  <a href="/graphs/" >Back to Graphs Index</a>
+</div>

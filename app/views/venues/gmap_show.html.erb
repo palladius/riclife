@@ -1,0 +1,14 @@
+<html>
+   <head>
+      <title>Test</title>
+      <%#= GMap.header %>
+   </head>
+
+   <body>
+		 <h1>
+			 Mappa <%= @venue.name %>
+		 </h1>
+      <%= @map.to_html %>
+      <%= @map.div(:width => 600, :height => 400) %>
+   </body>
+</html>

@@ -1,0 +1,32 @@
+<table border="1" cellspacing="5" cellpadding="5">
+	<tr><td>
+Copiato da:
+http://juixe.com/techknow/index.php/2006/07/09/comments-on-acts-as-commentable/
+ma non va, lo sto rifacendo di la..
+<%  
+	form_tag( :controller => 'comments', :action => 'add_comment' ) do
+#	form_tag('/comments/add_comment' ) do
+#	form_tag :action => 'add_comment' do 
+%>
+  TU SEI: 
+		<b><%= current_user rescue "CurrentUser Error #{$!}" %></b>
+		<br/>
+  <i>RicDebug: Commento sul modello <%= devel 'non va' %>
+		<b>(
+			<%#= [model.type, model.id ].join('//') rescue "Model Sobenme: #{$!}"%>
+			<%= [model ].join('//') rescue "Model Sobenme: #{$!}"%>
+			)</b>
+		</i>
+	<br/>
+  <%= text_field 'comment', 'title' %>
+  <%= text_field 'comment', 'body' %>
+
+  <%#= hidden_field 'comment', 'user_id',    :value => @current_user %>
+  <%= hidden_field 'commentable', 'commentable',    :value => @model.type rescue "Model Type Sobenme: #{$!}" %>
+  <%= hidden_field 'commentable', 'commentable_id', :value => @model.id   rescue "Model Id Sobenme: #{$!}"%>
+  <%= submit_tag 'Add Comment Inet' %>
+<% end %>
+
+		</td></tr>
+</table>
+<%= render :partial => "comments/show_entity_comments",{ :model => @event , :render_notes => "Called by Event"} rescue "EntityComments Err (#{$!})"%>

@@ -1,0 +1,50 @@
+<%
+  # $Id: footer.erb 1488 2010-06-15 18:06:42Z riccardo $ 
+  enable_verbose_debug = false
+%>
+<hr/>
+ <div id='footer'> 
+   <div align='center'>
+     <table>
+       <tr>
+         <td align="center" >
+          <p>
+            <small>
+            <tt>$Id: footer.erb 1488 2010-06-15 18:06:42Z riccardo $</tt> |
+              <i>RicLife v.<%= RICLIFE_VERSION %></i>
+                  <br/>
+              IP <tt><%= request.remote_ip %></tt> (from <b><%= geo_city_nation(request.remote_ip) %></b>)|
+                <a href="http://riclife.palladius.eu/">RicLife</a> |
+                <b><%= Socket.gethostname %></b>:<tt><i><%=RAILS_ROOT%></i></tt>
+            </small>
+          </p>
+         <%= image_tag("icons/powered_by_palladius.png", :valign => 'center' ) %>
+         </td>
+         <td >
+            <%= get_icon_environment("riccardo", "100" ) %>
+         </td>
+       </tr>
+     </table>
+   </div>
+ </div>
+<%#= render :partial => "shared/togglable" -%>
+<% if ENV["RAILS_ENV"] == "development" && enable_verbose_debug %>
+	<hr/>
+	<div class='development'>
+		<h6>DEBUGGO 'params'</h6> 
+			<%= debug(params) %>
+		<h6>DEBUGGO 'ENV'</h6> 
+			<%=debug(ENV) %>
+                  <tt>KV[cap:deploy_last]: <b><%= Keyval.find_by_key("cap:deploy_last") %></b></tt>
+						<br/>
+            <tt>KV[cap:deploy_history]: <b><%= Keyval.find_by_key("cap:deploy_history") %></b></tt>
+     	<p class='development'>
+          <a href='http://dev.palladius.eu/websvn/listing.php?repname=ricdev&path=%2Fprojects%2Friclife%2F#_projects_riclife_' >
+          RicLife WebSVN</a>
+	</p>
+	<%=render :partial => "shared/debug" %>
+	<%#= get_icon_environment ENV["RAILS_ENV"],"bandierine" %>
+	<%#= get_icon_environment ENV["RAILS_ENV"],"rails" %>
+	</div>
+<% end %>
+        

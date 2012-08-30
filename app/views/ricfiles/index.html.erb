@@ -1,0 +1,28 @@
+<h1>Listing ricfiles</h1>
+
+<table>
+  <tr>
+    <th>Host</th>
+    <th>Path</th>
+    <th>Uri</th>
+    <th>Tags</th>
+    <th>Metatags</th>
+  </tr>
+
+<% @ricfiles.each do |ricfile| %>
+  <tr>
+    <td><%=h ricfile.host %></td>
+    <td><%=h ricfile.path %></td>
+    <td><%=h ricfile.URI %></td>
+    <td><%=h ricfile.tags %></td>
+    <td><%=h ricfile.metatags %></td>
+    <td><%= link_to 'Show', ricfile %></td>
+    <td><%= link_to 'Edit', edit_ricfile_path(ricfile) %></td>
+    <td><%= link_to 'Destroy', ricfile, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ricfile', new_ricfile_path %>

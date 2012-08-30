@@ -1,0 +1,9 @@
+<h1>Calendar TBD</h1>
+
+<%=render :partial => "comments/add_comment_form",  :locals => { :model => @calendar } rescue "Comment Event XCPT: #{$!}"%>
+
+<%= link_to '.TXT/.ICS', "/calendars/#{@calendar.id}.txt" %>
+<pre class='calendar' ><%= @ical.to_ical %></pre>
+
+<h1>Super Model Show TBD</h1>
+<%#= render :super rescue "Super Error (soccmel!): #{$!}"%>

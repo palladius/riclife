@@ -1,0 +1,17 @@
+<div class='Event'>
+	<% @event = Event.new %>
+	<% form_for(@event) do |f| %>
+	  <%= f.error_messages %>
+	  <p>
+	    <%= f.label :venue %>
+	    <%#= f.select_tag :venue %>
+	 	<%#= f.collection_select(:event, :venue_id, Venue.find_all_by_active(true, :order => :name), :id, :name, {:include_blank => true}, {"style" => "width:250px"} ) rescue "CollectionSelect Err(#{$!})"%>
+	 	<%= f.collection_select(:venue_id, Venue.find_all_by_active(true, :order => :name), :id, :name, {:include_blank => true}, {"style" => "width:250px"} ) rescue "CollectionSelect Err(#{$!})"%>
+
+	    <%= f.label :summary %>
+	    <%= f.text_field :summary %>
+	
+	    <%= f.submit 'Quick Event' %>
+	  </p>
+	<% end rescue "Exception with Event.QuickAdd: #{$!}" %>
+</div>

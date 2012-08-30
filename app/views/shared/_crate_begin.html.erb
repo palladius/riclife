@@ -1,0 +1,32 @@
+<%
+	title ||=  "Title not provided! Please add to the partial sth like this: <u>, :locals => {:title => 'sobenme' }</u>"
+	icon_path ||= 'icons/warning.png'
+	border ||= 1
+%>
+<div class="my_projects right_snippet" align="right">
+<!-- Sposta tutto in _crate_begin.html, un partial dotato di titolo e icona -->
+<table class='tabella1ext' border="<%= border %>">
+  <tr><td>
+    <table class='tabella1int'><tr><td>
+	  <!-- This table will be closed HERE, the other 2 will be closed in crate_end -->
+      <table class='scatolabella' border='0' >
+		<tr>
+	  	  <td width='80%' >
+			<h2><%= title %></h2>
+	  	  </td>
+	  	  <td align="right" width='20%' >
+	  		<%= image_tag( icon_path ,  :align => 'left' , :height => 45 ) %>
+		  </td>
+	 	</tr>
+      </table>
+
+<!-- crate end is sth like this:
+
+      </td></tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+-->

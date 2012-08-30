@@ -1,0 +1,120 @@
+<% form_for @person do |f| %>
+  <%= f.error_messages rescue "MetaError: error with errors, ci crederesti?!? #{h $!}"%>
+	<table border="0" width="100%" >
+	<tr><td valign="top" >
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname %>
+  </p>
+  <p>
+    <%= f.label :nickname  %><br />
+    <%= f.text_field :nickname %>
+	<%= f.label :male %><%= f.check_box :male %>
+  </p>
+  <p> 
+	<%#= f.label :email %><br />
+    <%= f.text_field :email  %>   (*) <br/>
+    <%= f.text_field :work_email  %> Work <br/>
+    <%= f.text_field :pers_email  %> Personal <br/>
+  </p>
+  <p>
+    <%= f.label       :birthday %><br />
+    <%= f.date_select :birthday, 
+		:order => [:day, :month, :year], 
+		:include_blank => true,
+		:start_year => Time.now.year - 99, # TBD forse piu avanti?!? Metti this.year - 100
+		:end_year   => Time.now.year       # TBD metti this year
+		# TBD Time.now.year
+		# http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#M002264
+	%>
+  </p>
+  <p>
+	<b>Home</b><br />
+    <%= f.text_field :location %>
+	GeoIp it TBD? <%#= f.check_box :geoip_autoadd_location %>
+    <br />
+	<%= collection_select(:person, :venue_id, Venue.find_all_by_active(true, :order => "name") , :id, :name , :include_blank => true ) %>
+  </p>
+  <p>
+	<b>Work</b><br />
+    <%= f.text_field :organisation %>
+	GeoIp it?
+	<br />
+	<%= f.collection_select( "work_venue_id", Venue.find_all_by_active(true, :order => "name") , :id, :name, :include_blank => true) %>
+  </p>
+  <p>
+	<b>Nationality</b><br />
+    <%= f.text_field :nationality %>
+	<br />
+	<%= f.collection_select( "country_id", Country.find_all_by_favourite(true, :order => "name") , :id, :name, :include_blank => true) %>
+  </p>
+  <p>
+    <%= f.label      :mobile %><br />
+    <%= f.text_field :mobile %>
+  </p>
+
+	</td>
+	
+	<td valign="top" >
+		<p>
+	    <%= f.label :tags %><br />
+	    <%= f.text_field :tags %>
+	  </p>
+	  <p>
+	    <%= f.label      :feed %><br />
+	    <%= f.text_field :feed %>
+	  </p>
+	  <p>
+	    <%= f.label      :photo_name %><br />
+	    <%= f.text_field :photo_name %>
+	  </p>
+  <p>
+    <%= f.label :virtual %><%= f.check_box :virtual %>
+    <%= f.label :starred %><%= f.check_box :starred %>
+	<%= f.label :published %><%= f.check_box :published %>
+
+  </p>
+  <p>
+    <%= f.label      :relational_status %><br />
+    <%= f.text_field :relational_status %>
+  </p>
+
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.label      :goliardic_name %><br />
+    <%= f.text_field :goliardic_name %>
+	<%= f.label :goliard %>?<%= f.check_box :goliard %>
+  </p>
+
+	</td></tr>
+	
+<tr>
+	<td valign='top' >
+	  <h2>D&D</h2>
+	<% %w{ strength wisdom intelligence dexterity constitution charisma }.each do |dnd_attr|   %>
+	  <p>	
+		<input type="range" min="3" max="18" id="person_<%=dnd_attr%>" name="person[<%=dnd_attr%>]" value="<%=@person.send(dnd_attr)%>"  >
+		<%= f.label( dnd_attr.to_sym ) %>
+	  </p>
+	<% end  %>
+
+	<td valign='top' >
+	  <h2>Other data</h2>
+	<% %w{ sexappeal vote relevance }.each do |other_attr|   %>
+	  <p>	
+		<input type="range" min="0" max="100" id="person_<%=other_attr%>" name="person[<%=other_attr%>]" value="<%=@person.send(other_attr)%>"  >
+		<%= f.label( other_attr.to_sym ) %>
+	  </p>
+	<% end  %>
+  </tr>
+</table>
+
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,23 @@
+<% title "Cities" %>
+
+<table>
+  <tr>
+    <th>Nomecitta</th>
+    <th>Sigla</th>
+    <th>Regione</th>
+    <th>Id Pseudoid</th>
+  </tr>
+  <% for city in @cities %>
+    <tr>
+      <td><%=h city.nomecitta %></td>
+      <td><%=h city.sigla %></td>
+      <td><%=h city.regione %></td>
+      <td><%=h city.id_pseudoid %></td>
+      <td><%= link_to "Show", city %></td>
+      <td><%= link_to "Edit", edit_city_path(city) %></td>
+      <td><%= link_to "Destroy", city, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New City", new_city_path %></p>

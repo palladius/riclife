@@ -1,0 +1,38 @@
+<h1>Listing next events</h1>
+
+<table>
+  <tr>
+    <th>Summary</th>
+    <th>Description</th>
+    <th>Venue</th>
+    <th>Location</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Repeats</th>
+    <th>Organizer</th>
+    <th>Class</th>
+    <th>Status</th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr>
+    <td><%=h event.summary %></td>
+    <td><%=h event.description %></td>
+    <td><%=h event.venue_id %></td>
+    <td><%=h event.location %></td>
+    <td><%=h event.start %></td>
+    <td><%=h event.end %></td>
+    <td><%=h event.repeats %></td>
+    <td><%=h event.organizer_id %></td>
+    <td><%=h event.class %></td>
+    <td><%=h event.repeat_frequency %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New event', new_event_path %>

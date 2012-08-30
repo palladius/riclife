@@ -1,0 +1,26 @@
+<% if( @current_user_id != -1 ) %>
+
+	<h1>Contacts for your identities</h1>
+
+Hi, dear <%= @current_user %> (id=<%= @current_user.id %>).
+<%
+@identities.each {|identity|	%>
+	<%= render :partial => "identities/show_contacts", :locals => { :identity => identity } %>
+<%	} if @identities %>
+<% else %>
+	<%= render :partial => "sessions/needs_login" %>
+<% end %>
+
+
+<table border='1'>
+	<% @contacts_arrays.each{ |arr| %>
+	<tr>
+		<td>
+			Dall'array controller
+		<td>
+			<pre>
+				<%#= arr.map{|name,email| link_to(name, "mailto:#{email}") } if arr[0].is_a?(Array) %>	
+				<%#= arr.map{|name,email| email }.join("\n") if arr[0].is_a?(Array) %>	
+			</pre>
+	<%  } if false %>
+</table>

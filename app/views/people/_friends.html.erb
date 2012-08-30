@@ -1,0 +1,30 @@
+<% 
+	show_half_relationships = true # show also semi-friendships..
+	
+	img =  image_tag( 'models/friendship.png', :height => 15, :border => 0)
+	followers = Friendship.find_all_by_person_id(@person.id) rescue [] # .map{|p| p.followed } rescue nil # [ "Eccezione #{$!}"]
+	follows = Friendship.find_all_by_followed_id(@person.id) rescue [] # .map{|p| p.person} rescue nil
+	#friends = (follows & followers) # non funge perche hanno id diversi :)
+	friends = follows.select{|x| x.reciprocated? } # verifica se ha reciproci... TBDOPT
+	name = @person.name.capitalize
+	def link_friendship_person(f,p)
+		
+	end
+%>
+<div class='people_friends' >
+	<% if show_half_relationships %>
+		<p><%= name %> follows <%= follows.size %>:
+				<b><%= follows.map{|f| link_to(img,f) + link_to(f.person,f.person) }.select{|p| !friends.include?(p) || true }.join(', ') rescue "Problemi col parziale dei commenti: #{$!}"
+				%></b>
+		<p><%=name %> is followed by <%= followers.size %>:
+			<b><%= followers.map{|f| link_to(img,f) + link_to(f.followed,f.followed) }.select{|p| !friends.include?(p) || true }.join(', ')  # if followers 
+			%></b>
+		</p>
+	<% end %>
+	<% if friends.size > 0 %>
+	<p><%= His(person) %> <%=friends.size%> friends:
+			<b><%= friends.map{|f| link_to(img,f) + link_to(f.person,f.person) }.select{|p| !friends.include?(p) || true }.join(', ')  # if followers 
+			%></b>
+		</p>
+	<% end %>
+</div>

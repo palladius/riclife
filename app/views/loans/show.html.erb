@@ -1,0 +1,65 @@
+<%# title "Loan" %>
+
+<h1><%=title_column(@loan) %></h1>
+
+<h2> ( <%=quantity_column @loan %> from <%=link_to @loan.ower, @loan.ower %> )</h2>
+
+<p>
+  <strong>Quantity:</strong>
+  <%=quantity_column @loan %>
+</p>
+<p>
+  <strong>People Involved:</strong>
+  <%=people_involved_column @loan %>
+</p>
+
+<p>
+  <strong>Ower:</strong>
+  <%=link_to @loan.ower, @loan.ower %>
+</p>
+<p>
+  <strong>Solved / Starred:</strong>
+  <%=solved_column @loan %>
+  <%=starred_column @loan %>
+</p>
+<p>
+  <strong>Creditor:</strong>
+  <%=link_to @loan.creditor,@loan.creditor %>
+</p>
+<p>
+  <strong>Tags:</strong>
+  <%=render_tags @loan %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @loan.description %>
+</p>
+<p>
+  <strong>Recurs Days:</strong>
+  <%=h @loan.recurs_days %>
+</p>
+<!-- penso vada tolto! 
+<p>
+  <strong>Loan Id (???):</strong>
+  <%#=h @loan.loan_id %>
+</p>
+	Penso che questo fosse un tentativo per vedere di fare i Loans tra UTENTI e non tra CONTATTI.
+<p>
+  <strong>UserTo Id:</strong>
+  <%#=h @loan.user_to_id %>
+</p>
+-->
+<p>
+  <strong>Date Start:</strong>
+  <%=h @loan.date_start %>
+</p>
+<p>
+  <strong>Date End:</strong>
+  <%=h @loan.date_end %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_loan_path(@loan) %> |
+  <%= link_to "Destroy", @loan, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", loans_path %>
+</p>

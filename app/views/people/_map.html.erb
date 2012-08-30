@@ -1,0 +1,10 @@
+<h6><%= person %>'s map</h6>
+You are <%=get_person rescue "'errore getperson #{$!}" %>
+<%
+  @map = gmap_create("person_map_div", person.venue )
+  if person.venue 
+	add_to_map(person,@map)
+  end
+%>
+<%= @map.to_html %>
+<%= @map.div(:width => 300, :height => 200) %>

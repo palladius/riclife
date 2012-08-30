@@ -1,0 +1,55 @@
+<div class='tags_show' >
+	<h1>Tag '<%=@tag%>' </h1>
+
+<h2>Synoptic for tag '<%= @tag %>'</h2>
+
+<div class='tags_synoptic' >
+	<p>
+	<% @htags.each{ |model,records|  
+		nrecords = records.size
+		if (nrecords>0)
+			%>
+			<li><%= image_tag("models/#{model.to_s.tableize.downcase.singularize}.png", :height => 10 ) %>
+				<a href="#model_anchor_<%=model%>">
+			  		<%= nrecords%> for model <i><%= model %> </i>
+				</a>
+			</li>
+			<% 
+		end
+	   } # /htags synoptic 
+	%>
+	</p>
+</div>
+
+	<table border='0' >
+	<% @htags.each{ |model,records|  
+		nrecords = records.size
+		if (nrecords>0)
+	%>
+		<tr class='debug' >
+			<td colspan='3' >
+				<h4 id="model_anchor_<%=model%>" >
+				<%= image_tag("models/#{records.first.class.to_s.downcase.singularize}.png", :height => 50 ) %>
+					Anchor <%=nrecords%> <i><%=model %></i>
+				</h4>
+		</tr>		
+		<% records.each do |p| %>
+		  <tr>
+			<td >
+				<%= image_tag("models/#{p.class.to_s.downcase.singularize}.png", :height => 20 ) %>
+			<td >
+				<%= magic_links(p, 'u' ) rescue "Exc: #{$!}" %>
+				<%= link_to(p,p) rescue "Exc: #{$!}" %>
+			<td>
+				<%= render_tags(p) rescue "RenderTags() Err: #{$!}" %>
+			<!-- <td>DEB '''<%= p.tags %>'''  -->
+		  </tr>
+		<% 
+			end  
+		end
+		%>
+	<% } %>
+	</table>
+
+
+</div>

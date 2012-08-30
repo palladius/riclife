@@ -1,0 +1,13 @@
+<%
+  info = {}
+  info['current_user.id'] = (current_user.id rescue "-") 
+  info[:current_user]   = current_user rescue "Err2: #{$!}" 
+  info[:anonymous?]     = anonymous? rescue "Err3: #{$!}"
+  #info[:anonimo?]      = anonimo? rescue "Err4: #{$!}"
+%>
+<div class='debug' >
+	<% info.map{|k,v| %> 
+		<tt><%= h k  %></tt> =&gt; <b><%= h v  %></b>   
+	<% } %>
+
+</div>

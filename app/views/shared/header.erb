@@ -1,0 +1,19 @@
+<div class="header" >
+  <table border="0" width="100%">
+    <tr>
+      <td>
+        <%= header_banner('logos/logo.png') -%>
+      </td>
+      <td>
+        <span id='search' width=100 align=right>
+          <%= render :partial => "site/minimal_search_form" -%>
+        </span>
+      </td>
+    </tr>
+  </table>
+<% if ENV["RAILS_ENV"] == "development" %>
+  <%=render :partial => "users/debug_info" %>
+<% end %>
+</div>
+<%= render :partial => "people/last_three" %>
+<%= render :partial => "venues/last_five"  %>

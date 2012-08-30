@@ -1,0 +1,20 @@
+<%= render :super %>
+
+<div class='rcarlesso develop'>
+	<%= icon('people/rcarlesso.jpg', :height => 40) rescue "nil#{$!}" %>
+	<p>
+		<%= icon('icons/edit')%>
+			<%= link_to("Edit <b>#{@record.to_label}</b>", @record ) rescue "Err(#{$!})"%>
+	</p>
+	<p>
+		<%= icon('icons/add')%>
+			<%= link_to("New '#{@record.class}'", :controller => @record.class.to_s.pluralize, :action => "new" ) rescue "Err(#{$!})"%>
+		</p>
+		<p>
+		<%= icon('icons/contents') %>
+			<%= link_to("List all '#{@record.class}z'", :controller => @record.class.to_s.pluralize  ) rescue "Err(#{$!})" %>
+		</p>
+		
+</div>
+<%= render "shared/debug" rescue "DEBUG ERR: #{$!}" %>
+

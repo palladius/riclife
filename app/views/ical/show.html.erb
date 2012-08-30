@@ -1,0 +1,21 @@
+<%=	%w[ ics txt html].map{ |x|	link_to "competitions.#{x}", "/ical/competitions.#{x}"	}.join ' - ' %>
+
+<h1>Calendari di Riccardo</h1>
+	(TBD di utente specifico tipo <b><%= current_user rescue "CurrUser(#{$!},caller)" %></b>)
+	
+<%= current_user.person rescue "'se non fai il login che sono io, un indovino?? (exception=''#{$!}'')'".tag('font', :color => 'purple') %>
+<% current_user.person.calendars rescue [].each do |cal|  %>
+	<li>Calendario: <%= link_to Calendar.find(cal.id) %></li>
+<% end %>
+
+<h2>Headlines</h2>
+
+	<%= @ical.class rescue "Headlines prob: #{$!}" %>
+
+<h2>iCal vero e proprio</h2>
+
+Non so perché funga solo da html la funzione "to_ical" mentre altrove da una schifezza.
+Forse questione di contesti???
+@ical.to_ical :
+
+<pre><%= @ical.to_ical %></pre>

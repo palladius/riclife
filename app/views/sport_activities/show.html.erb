@@ -1,0 +1,32 @@
+<p>
+  <b>Name:</b>
+  <%=h @sport_activity.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @sport_activity.description %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%=h @sport_activity.duration %>
+</p>
+
+<p>
+  <b>Calories:</b>
+  <%=h @sport_activity.calories %>
+</p>
+
+<p>
+  <b>Activity:</b>
+  <%=h @sport_activity.activity %>
+</p>
+<p>
+  <b>Date:</b>
+  <%=h @sport_activity.activity %>
+</p>
+
+
+<%= link_to 'Edit', edit_sport_activity_path(@sport_activity) %> |
+<%= link_to 'Back', sport_activities_path %>

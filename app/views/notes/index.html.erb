@@ -1,0 +1,2 @@
+<%= render( :partial => "notes/quick_add" ) rescue "Comment Err: #{h( $!.to_s).pre}"%>
+<%= render( :super ) rescue "Comment Err: #{$!.to_s.pre}"%>

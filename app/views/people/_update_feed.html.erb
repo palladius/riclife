@@ -1,0 +1,10 @@
+<div class='person'>
+	<% @person = current_user.person rescue "Person.last(#{$!})" %>
+	<% form_for(@person) do |f| %>
+	  <%= f.error_messages %>
+	  <p>What u thinkin about, <span class='person'><%= link_to @person,@person %></span>?
+	    <%= f.text_field :feed %>
+	    <%= f.submit 'Update Feed' %>
+	  </p>
+	<% end rescue "Exception with Person.QuickAdd: #{$!}" %>
+</div>

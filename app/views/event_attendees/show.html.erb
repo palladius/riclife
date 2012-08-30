@@ -1,0 +1,23 @@
+<p>
+  <b>Calendar:</b>
+  <%=h @event_attendee.calendar_id %>
+</p>
+
+<p>
+  <b>Person:</b>
+  <%=h @event_attendee.person_id %>
+</p>
+
+<p>
+  <b>Confirmed:</b>
+  <%=h @event_attendee.confirmed %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @event_attendee.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_attendee_path(@event_attendee) %> |
+<%= link_to 'Back', event_attendees_path %>

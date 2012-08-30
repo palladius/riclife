@@ -1,0 +1,21 @@
+<% 
+	show_half_relationships = true # show also semi-friendships..
+	
+	img =  image_tag( 'models/identity.png', :height => 15, :border => 0)
+	# followers = Friendship.find_all_by_person_id(@person.id) rescue [] # .map{|p| p.followed } rescue nil # [ "Eccezione #{$!}"]
+	# follows = Friendship.find_all_by_followed_id(@person.id) rescue [] # .map{|p| p.person} rescue nil
+	# friends = (follows & followers)
+	identities = Identity.find_all_by_person_id(@person.id) rescue []
+%>
+<div class='people_identities' >
+	<% if identities.size > 0 %>
+	<p><%= His(person) %> identities (size=<%=identities.size%>):
+		<li>
+			<b>
+			<%#= identities.map{|f| link_to(img,f) + link_to(f.followed,f.followed) }.join(', ')  %>
+			<%= identities.map{|i| link_to(img,i) + link_to(i,i) + "(#{i.app})" }.join('<li> ')  %>
+		</b>
+	<% end %>
+	<%#= identities_column(@person) %>
+	
+</div>

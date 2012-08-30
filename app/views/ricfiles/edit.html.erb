@@ -1,0 +1,32 @@
+<h1>Editing ricfile</h1>
+
+<% form_for(@ricfile) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </p>
+  <p>
+    <%= f.label :path %><br />
+    <%= f.text_field :path %>
+  </p>
+  <p>
+    <%= f.label :URI %><br />
+    <%= f.text_field :URI %>
+  </p>
+  <p>
+    <%= f.label :tags %><br />
+    <%= f.text_field :tags %>
+  </p>
+  <p>
+    <%= f.label :metatags %><br />
+    <%= f.text_area :metatags %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @ricfile %> |
+<%= link_to 'Back', ricfiles_path %>

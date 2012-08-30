@@ -1,0 +1,38 @@
+<h1>RicLife 09 on Rails!!</h1>
+
+<p>	Benvenuto al mio sito con tutti i miei ciappini, dati e correlazioni.
+</p>
+<%= #image_tag "logos/ricdublino-lavoro1.jpg", #   "logos/riclife-logo.jpg", 
+	image_tag "logos/logo.png", #   "logos/riclife-logo.jpg", 
+	:alt => 'Rics life 2009', 
+		:width => '200',
+		:align => 'right'
+-%>
+<p>
+  <b>Ultimi contatti</b>:
+  <%= Person.find(:all, :limit => 7).map{|x| link_to x,x}.join(', ')  %>
+</p>
+<p>
+  <b>Prox eventi da oggi a 1 settimane</b><br/>
+  <%= Event.future.close.find(:all, :limit => 5).map{|x| link_to x.concise,x}.join('<br/> ')  %>
+</p>
+
+<h2>TODO</h2>
+
+  <%= t=Keyval.find_by_key("TODO") %>
+<tt>KV[TODO] "<b><%= t.val %></b>"</tt> <em><%= t.description %> </em>
+<p>
+	<%= todo "Metti canzoni con librerie, e poi se scaricato o meno e un importatore di testo :)" %>
+
+<h2>About RicLife <%= ApplicationHelper::RICLIFE_VER %> </h2>
+
+<p>
+	<%= ApplicationHelper::RICLIFE_DESC.quote.quote.italic %> 
+</p>	
+
+	<h2>TBD Geolocation</h2>
+2 - verifica se la geolocation da piu info di quel che prendi (tipo la precision!)
+<%= render :partial => 'venues/quick_add' %>
+<%= render :partial => 'people/quick_add' %>
+<%= render :partial => 'events/quick_add' %>
+<%= render :partial => 'people/update_feed' %>

@@ -1,0 +1,16 @@
+<% sample_tags.each {|tag|  %> 
+	<%= render :partial => "tags/link" , :locals => { :tags => tag } %>
+<% } %>
+
+<h2>RicLife Index </h2>
+
+<% if current_user.nil? %>
+	<%= render :partial => 'shared/unauthorized' %>	
+<% else%> 
+	<a href="/friendships/update_dotsvg.png" >
+		<img src="/friendships/update_dotsvg.png" width='100%' align='right' />
+	</a>
+		<%= render :file => 'site/homepage' %>
+<% end%>
+
+<%= render :partial => "shared/togglable" -%>

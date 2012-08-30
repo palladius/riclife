@@ -1,0 +1,24 @@
+<h1>
+	<%= flag_column(@country,30) %>
+	<%=h @country.name %>
+</h1>
+<p>
+  <b>Code:</b>
+  <%=h @country.code %>
+</p>
+
+
+
+<p>
+  <b>Description:</b>
+  <%=h @country.description %>
+</p>
+
+<p>
+  <b>Favorite:</b>
+  <%=h @country.favourite %>
+</p>
+
+
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'See all', countries_path %>

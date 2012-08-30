@@ -1,0 +1,11 @@
+.title_box
+  .innertube
+    Menu
+.navigation_box
+  .innertube
+    = link_to "People", people_path
+    %br
+    = link_to "Check CSS", :action=>'check_css', :controller=>'info'
+    %br
+    = link_to "About Rails", '/about_rails.html'
+

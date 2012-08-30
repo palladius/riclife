@@ -1,0 +1,23 @@
+<% title "City" %>
+
+<p>
+  <strong>Nomecitta:</strong>
+  <%=h @city.nomecitta %>
+</p>
+<p>
+  <strong>Sigla:</strong>
+  <%=h @city.sigla %>
+</p>
+<p>
+  <strong>Regione:</strong>
+  <%=h @city.regione %>
+</p>
+<p>
+  <strong>Id Pseudoid:</strong>
+  <%=h @city.id_pseudoid %>
+</p>
+<p>
+  <%= link_to "Edit", edit_city_path(@city) %> |
+  <%= link_to "Destroy", @city, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", cities_path %>
+</p>

@@ -1,0 +1,93 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:iCalendar-Ruby
+BEGIN:VEVENT
+SEQUENCE:0
+DTEND:210000
+DTSTART:230000
+UID:2009-11-25T19:18:35+01:00_196158028@ricvm06
+DTSTAMP:20091125T191835
+DESCRIPTION:Descrizione data a build_calendar: Creato da show\n\nFull Descr
+ iption provided in the notes (per comodita):\n--\nsolita festa sabato sera\
+ n--\n#<Venue:0x7f487f1cb118>\n--\nElegance Bar\, Ormond Quay\, Dublin\n--\n
+ 2009-11-24 23:00:00 UTC\n--\n2009-11-24 21:00:00 UTC\n--\n\n--\n
+SUMMARY:[RicLife-BuildCalendar] CS Party
+END:VEVENT
+BEGIN:VEVENT
+SEQUENCE:0
+DTEND:190000
+DTSTART:125400
+UID:2009-11-25T19:18:35+01:00_499801969@ricvm06
+DTSTAMP:20091125T191835
+DESCRIPTION:Descrizione data a build_calendar: Creato da show\n\nFull Descr
+ iption provided in the notes (per comodita):\n--\nHost: 	\nconnector\nType:
+  	\nParty - Club Party\nNetwork: 	\nGlobal\nStart Time: 	\nThursday\, 26 No
+ vember 2009 at 19:00\nEnd Time: 	\nFriday\, 27 November 2009 at 01:00\nLoca
+ tion: 	\nKobra Bar\nStreet: 	\nLeeson Street\nTown/City: 	\nDublin\, Irelan
+ d\n--\n#<Venue:0x7f487f18fe10>\n--\nKobra Bar\, Leeson St. Dublin\n--\n2009
+ -11-24 12:54:00 UTC\n--\n2009-11-24 19:00:00 UTC\n--\n\n--\n
+SUMMARY:[RicLife-BuildCalendar] Connector Party Thu 27 Nov 09
+END:VEVENT
+BEGIN:VEVENT
+SEQUENCE:0
+DTEND:131600
+DTSTART:131600
+UID:2009-11-25T19:18:35+01:00_952219278@ricvm06
+DTSTAMP:20091125T191835
+DESCRIPTION:Descrizione data a build_calendar: Creato da show\n\nFull Descr
+ iption provided in the notes (per comodita):\n--\n\n--\n#<Venue:0x7f487f16e
+ 288>\n--\nDublin\n--\n2009-11-24 13:16:00 UTC\n--\n2009-11-24 13:16:00 UTC\
+ n--\n\n--\n
+SUMMARY:[RicLife-BuildCalendar] Concert YES
+END:VEVENT
+BEGIN:VEVENT
+SEQUENCE:0
+DTEND:213400
+DTSTART:233400
+UID:2009-11-25T19:18:35+01:00_583674426@ricvm06
+DTSTAMP:20091125T191835
+DESCRIPTION:Descrizione data a build_calendar: Creato da show\n\nFull Descr
+ iption provided in the notes (per comodita):\n--\n\n--\n#<Venue:0x7f487f152
+ 290>\n--\nDublino\n--\n2009-12-29 23:34:00 UTC\n--\n2009-12-29 21:34:00 UTC
+ \n--\nboh\n--\n
+SUMMARY:[RicLife-BuildCalendar] Compleanno Palladiano
+END:VEVENT
+BEGIN:VEVENT
+SEQUENCE:0
+DTEND:200000
+DTSTART:222000
+UID:2009-11-25T19:18:35+01:00_58973037@ricvm06
+DTSTAMP:20091125T191835
+DESCRIPTION:Descrizione data a build_calendar: Creato da show\n\nFull Descr
+ iption provided in the notes (per comodita):\n--\n Thursday 26th November D
+ ownstairs in Le Cirk Bar 32\, Dame Street \, Dublin 2\, Free Admission\, gr
+ eat music from 8pm and Drinks Promos!!!! come along for a great night!\n--\
+ n#<Venue:0x7f487f126028>\n--\nLe Cirk Bar 32\, Dame Street \, Dublin 2\n--\
+ n2009-11-26 22:20:00 UTC\n--\n2009-11-26 20:00:00 UTC\n--\n\n--\n
+SUMMARY:[RicLife-BuildCalendar] Acoustic music with SueCallaghan
+END:VEVENT
+BEGIN:VEVENT
+SEQUENCE:0
+DTEND:145500
+DTSTART:145500
+UID:2009-11-25T19:18:35+01:00_375637161@ricvm06
+DTSTAMP:20091125T191835
+DESCRIPTION:Descrizione data a build_calendar: Creato da show\n\nFull Descr
+ iption provided in the notes (per comodita):\n--\ndescrizione\n--\n#<Venue:
+ 0x7f487f0f6aa8>\n--\nRicLife Production\, Event Dublin\n--\n2009-11-28 14:5
+ 5:00 UTC\n--\n2009-11-26 14:55:00 UTC\n--\nstatus\n--\n42.0
+SUMMARY:[RicLife-BuildCalendar] prova evento produzione DELETEME
+END:VEVENT
+BEGIN:VEVENT
+SEQUENCE:0
+CLASS:PRIVATE
+DTEND:20091128
+DTSTART:20091124
+UID:2009-11-25T19:18:35+01:00_842501112@ricvm06
+DTSTAMP:20091125T191835
+DESCRIPTION:stupido ... /var/www/capistrano/riclife/releases/20091125181751
+ /app/models/event.rb
+SUMMARY:Estemporaneo da modello self.build_calendar
+END:VEVENT
+END:VCALENDAR

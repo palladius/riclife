@@ -1,0 +1,30 @@
+<h1>Add Ric's Person</h1>
+
+<% 
+	# mi aiuto da qui:
+	# http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html
+	form_for(@person) do |f| %>
+  <%= f.error_messages %>
+
+ <% %w{ name surname mobile mail location }.each do |my_field| %>
+	  <p>
+	    <%= f.label      my_field.to_sym %><br />
+	    <%= f.text_field my_field.to_sym %>
+	  </p>
+  <% end %>
+  <p>
+    <%#= f.check_box :male  %>
+	Male <%= radio_button("person", "male", "yes") %>
+	Female  <%= radio_button("person", "male", "no") %>
+
+  </p>
+  <p>
+    <%= f.label      :notes %><br />
+    <%= f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', people_path %>

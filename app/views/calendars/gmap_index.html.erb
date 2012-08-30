@@ -1,0 +1,28 @@
+<html>
+   <head>
+      <title>Calendars Gmaps</title>
+   </head>
+
+   <body>
+		 <h1>
+			<%= image_tag( 'models/calendar.png' , :height=>25 ) %> 
+			Map of Calendars
+			</h1>
+			(Actually I should do it for events pertaining TO YOU but..)
+      <%= @map.to_html %>
+      <%= @map.div(:width => 800, :height => 600) %>
+	
+	<h2>Some note on calendars/events here</h2>
+	<% @calendars.each { |cal| %>
+	  <h2>
+		<%= render :partial => 'calendars/fancy', :locals => { :calendar => cal } %> 
+	  </h2>
+		<% cal.events.each do |evt| %>
+			<li>
+			  <%= render :partial => 'events/fancy', :locals => { :event => evt } %> 
+			</li>		
+		<% end %>
+		<%= "<i>none</i>" if cal.events.size == 0 %> 	
+	<% } %>
+   </body>
+</html>

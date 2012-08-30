@@ -1,0 +1,46 @@
+<%
+  # $Id: footer.erb 944 2010-02-14 14:34:36Z riccardo $ 
+  #my_controller = myobj
+  my_model = myobj rescue 'page'
+
+%>
+<% if ENV["RAILS_ENV"] == "development" %>
+  <%= toggable_box_begin('box_header_develop', false ) %>
+	<hr />
+	<%= render :partial => "shared/crate_begin", :locals => { 
+		:title =>( "Development More Info") , 
+		:icon_path => 'icons/environment/rails/development.png' 
+	}  
+	%>
+ <div id='model_info'> 
+   <div align='center'>
+     <table>
+       <tr>
+         <td align="center" >
+          <p>
+            <small>
+            <tt></tt>
+            </small>
+          </p>
+         <%#= image_tag("models/#{my_model}.png", :valign => 'center' ) %>
+         </td>
+         <td >
+            <%#= get_icon_environment("riccardo", "100" ) %>
+         </td>
+       </tr>
+     </table>
+   </div>
+ </div>
+	<div class='develop'>
+		<h6>DEBUG PARAMS</h6> 
+			<%=debug(params.inspect) %>
+		<h6>DEBUG ENV</h6> 
+			<%=debug(ENV) %>
+	           <tt>KV[cap:deploy_last]: <b><%= Keyval.find_by_key("cap:deploy_last") %></b></tt>
+				<br/>
+	        <tt>KV[cap:deploy_history]: <b><%= Keyval.find_by_key("cap:deploy_history") %></b></tt>
+		</div>
+	<%= render :partial => "shared/crate_end" %>
+	<% end %>
+<%= toggable_box_end('box_header_develop') %>
+

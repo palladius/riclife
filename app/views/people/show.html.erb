@@ -1,0 +1,169 @@
+<%
+	#him = @person.male ? 'him' : 'her'
+	#his = @person.male ? :his : :her
+	@you_user   = current_user.id     rescue nil
+	@you_person = current_user.person rescue nil
+	
+%>
+<% if anonymous? %>
+	<%= render :partial => "users/error_login_snip", :locals => { :msg => 'Youre not allowed to see this wonderful person. Do a login, you lazy (wo)man!'} %>
+<% else %>
+	<div align="right" >
+	  <%= magic_links(@person, 'cud', :verbose => true) %>
+	</div>
+	<h1><%= link_to( @person, @person) rescue nil %></h1>
+
+		<!-- 
+			<h2>Anagraphics</h2>
+			-->
+	<%= render :partial => "people/feed" , :locals => { :person => @person } %>
+<hr/>
+<table border='0' width='95%' >		
+	<tr>
+		<td>
+		<td>
+		<td>	  
+		<td rowspan='3' >
+			<%= render :partial => 'people/thumbnail', :locals => { :person => @person , :height => 150 } %>
+	<tr>
+		<td>
+			<%= image_tag('models/user.png', :height => 25 ) %>
+		<td>
+			<b>User</b> 
+		<td>	  
+			<%= render :partial => 'users/fancy', :locals => { :user => @person.user } %>			
+			
+	<tr>
+		<td>
+			<%= image_tag('gmaps/house.png', :height => 25 ) %>
+		<td>
+	  		<b> <%= h @person.location %></b>
+		<td>
+	 		<%= render :partial => 'venues/fancy', :locals => { :venue => @person.venue } %>
+		</tr>
+		<tr class='place' >
+			<td>
+				<%= image_tag('gmaps/industry.png', :height => 25 ) %>
+			<td>
+		  		<b><%= @person.organisation %></b>
+			<td>
+				<%= render :partial => 'venues/fancy', :locals => { :venue => @person.work_venue } %>
+	</table>
+	
+	<h2 id='social' >Everything</h2>
+	
+	<div id="person_everything">
+		<table border='0' >
+		<% 
+			updater = User.find_by_login( @person.updated_by ) rescue nil
+			creator = User.find_by_login( @person.created_by) rescue nil # non va non c'e' mai nulla di appropriato..
+			email = @person.email rescue nil
+			minitable = {
+				'Name' => fancy_model(@person,name_surname_column(@person)), # .name_surname ,
+				'Tags' => render_tags( @person) ,
+				'Last Updater'  => fancy_model(updater),
+				'gender'  => gender_column(@person),
+				'creator'  => fancy_model(creator),
+				'birthdate' => birthdate_column(@person),
+				'nationality' => nationality_column(@person),
+				'country' => country_column(@person),
+				'relevance' =>   relevance_column(@person),
+#					'age' => distance_of_time_in_words_to_now(@person.birthday),
+				'email' => email ? link_to(email, "mailto:#{email}") : '-' , # if email,
+				'Notes' => transform_text_wiki_style(@person.notes) , 
+				'Marital Status' => @person.relational_status_description(),
+			}
+			minitable.each { |k,v| 
+				if (v.to_s != '') %>
+				<tr>
+				  <td><tt><%=k %></tt> 
+				  <td><b><%=v %></b> 
+				</tr><% 
+				end
+			} 
+			%>
+		</table>
+	</div>
+
+
+	
+	<!-- 
+		<h2>Comments (prova)</h2>
+	<p>
+		<div class='comment'>
+			<% @person.comments.each do |comment| %>
+				<p>Comment(<%=comment.to_s%>)
+				  <%= render :partial => 'comments/fancy', :locals => { :comment => comment } rescue "Problemi col parziale dei commenti: #{$!}" %>
+				</p>
+			<% end rescue "boh"%>
+		</div>
+	<p>
+	-->
+
+	<h2 id='social' >Social</h2>
+		<%= link_to( image_tag('models/friendship.png', :height => 25, :border => 0) + "Follow #{him(@person) rescue 'him/her' }", 
+			:controller  => :friendships , 
+			:action      => "new", 
+			:person_id   => (@you_person.id rescue 4242),
+			:followed_id => (@person.id rescue 4243), 
+			:tags        => 'friends', 
+			:notes       => '',
+			:importance => 31,
+			:align => 'right'
+		) %>
+		<%= link_to( image_tag('models/friendship.png', :height => 25, :border => 0) + "Get followed by #{him(@person) rescue 'him/her' }", 
+			:controller  => :friendships , 
+			:action      => "new", 
+			:person_id   => (@person.id rescue 4244),
+			:followed_id => (@you_person.id rescue 4245), 
+			:tags        => 'friends', 
+			#:notes        => 'DEBUG palleggiato dal People.show',
+			:importance => 29,
+			:align => 'right'
+		) %>
+		<div class ='social' >
+		  <%= render :partial => 'people/friends', :locals => { :person => @person } rescue pre_exception("Friendship Partial",$!) %>
+		</div>
+		
+		<h2 id='identities' >Identities</h2>
+			<%= link_to( image_tag('models/identity.png', :height => 25, :border => 0) + "Create Identity (MSN, GMAil, ...) for #{him(@person) rescue 'him/her' }", 
+				:controller  => :identities , 
+				:action      => "new", 
+				:person_id   => (@you_person.id rescue 4242),
+			#	:tags        => 'friends', 
+				:description       => "palleggiato da person#view ({{Person;#{@you_person.id}}}) and created by ''#{current_user}''"
+#				:importance => 31,
+#				:align => 'right'
+			) %>
+			<div class ='social' >
+			  <%= render :partial => 'people/identities', :locals => { :person => @person } rescue pre_exception("Friendship Partial",$!) %>
+			</div>
+			
+		<% if @person.goliard %>
+			<h2>Goliardia</h2>
+			<b><%= goliardic_name_column(@person) %></b>
+		<% end %>
+		
+		
+		<h2 id='dnd' >
+			<%= image_tag('icons/dungeonsdragonson_icon.jpg' ) %>
+			D&D
+		</h2>
+		
+		<table border='0' class='dnd' >
+		<% Person.dnd_attributes.each{ |dnd_attr| 
+			dnd_val = @person.send( dnd_attr )
+		%>
+			<tr>
+				<td><%= dnd_attr.capitalize %>
+				<td><%= dnd_val %>
+				<td><%= coloured_bar(dnd_val,18) %>
+			</tr>
+		<% } %>
+		</table>
+		
+		<h2 id='loans'>Loans</h2>
+		<%= render :partial => "show_loans" rescue pre_exception("Loans Partial",$!) %>
+		
+
+<% end %>	

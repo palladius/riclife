@@ -1,0 +1,8 @@
+<span class="loan" >
+  <%= starred_column(loan) %>
+  <%= people_involved_column(loan) -%>
+  <%= link_to(loan.to_s, loan) -%> 
+	(
+  	<%= quantity_column(loan) -%>
+	)
+</span>

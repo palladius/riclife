@@ -1,0 +1,19 @@
+<h1>
+	<%= link_to @gms.subject , @gms %>
+	<%= magic_links @gms %>
+</h1>
+<pre>From: <%= link_to(h( @gms.from.name_and_email), @gms.from ) %>
+To: <%= link_to(h( @gms.to.name_and_email), @gms.to) %>
+Date-Created: <%= @gms.created_at %>
+Date-Updated: <%= @gms.updated_at %>
+Subject: <%= @gms.subject %>
+X-Unread: <%= h @gms.unread %>
+
+<%= @gms.body %></pre>
+
+<% 
+	@gms.set_as_read()
+	# @gms.unread=false ; @gms.save
+	# mi sa che devo rendere NON LETTO sto msg :-)
+%>
+

@@ -1,0 +1,55 @@
+<h1>Tests for RicLife</h1>
+
+	<h2>Eventi invalidi</h2>
+	<%= 
+	  [Event, Person, Venue, Note, Project, VenueType].map do |model|
+		["<b>#{model}</b>",
+		model.all.valid?.map do |x| 
+			evt=model.find(x)
+			evt.valid?
+			link_to(evt.to_s,evt) + 
+			"<small class='debug' >( "+ 
+			evt.errors.full_messages.join('; ') + 
+			")</small>"
+		end
+		].join('<br/>, ') 
+	  end.join('<br/>')
+	%>
+
+	<h2>Boh</h2>
+Utenti possibili:
+
+<%=
+[ request.env["HTTP_X_FORWARDED_USER"],
+ request.env["REMOTE_USER"],
+ ].join(" :: ")
+%>
+
+
+<h3>
+	REMOTE_USER: ''<%= request.env["REMOTE_USER"] %>''
+</h3>
+
+<h2>Req ENV</h2>
+<p>
+<%#= h request.env.inspect  %>
+</p>
+
+<h2>Req ENV2</h2>
+<%=
+# request.env["HTTP_X_FORWARDED_USER"]
+# request.env["REMOTE_USER"]
+	arr = Array.new
+	request.env.map  { |e_name, e_value| "<b>#{e_name.to_s}</b>: #{h e_value.to_s}" }.join(" ..<br/>\n ")
+%>
+
+<h2>TODO</h2>
+TODO from DB:
+            <tt>KV[TODO]: <b><%= Keyval.find_by_key("TODO") %></b></tt>
+
+
+           <h2>About</h2>
+
+<p>RICLIFE_VER: <%= ApplicationHelper::RICLIFE_VER %> </p>
+<p>RICLIFE_DESC: <%= ApplicationHelper::RICLIFE_DESC %> </p>
+	

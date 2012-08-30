@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @event_type.name %>
+</p>
+
+<p>
+  <b>Icon:</b>
+  <%=h @event_type.icon rescue "'NO_ICON: #{$!}" %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @event_type.active %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @event_type.notes rescue "_NO_NOTES(#{$!})" %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_type_path(@event_type) %> |
+<%= link_to 'Back', event_types_path %>

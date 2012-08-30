@@ -1,0 +1,11 @@
+<% 
+# @user = current_user 
+# user = @user
+# person = user.person rescue nil
+# current_user_photo = "<img src='/images/people/#{@user.person.photo_name rescue 'nil.jpg' }' align ='right' height='70' >"
+%>
+<h4 class='error' >
+	Error: <%= msg rescue "Err: #{$!}" %>
+</h4>
+
+<%= render :partial => "users/login_snip" %>

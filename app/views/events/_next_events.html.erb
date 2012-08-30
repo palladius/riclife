@@ -1,0 +1,16 @@
+<%= render :partial => 'shared/crate_begin', :locals => { :title => "Next events", :icon_path => 'models/event.png' } %>
+  
+	<%  Event.future.find(:all, :limit => 6, :order => "tstart ASC" ).each do |evt| %>
+		<div class='event'>
+	       <%= render :partial => 'events/fancy', :locals => { :event => evt } %>
+	    </div>
+	<% end %>
+
+	<h5>Heroes from the past ;)</h5>
+	<%  Event.past.find(:all, :limit => 10, :order => "tstart ASC" ).each do |evt| %>
+	       <li>
+		<%= render :partial => 'events/essential', :locals => { :event => evt } %>
+		</li>
+	<% end %>
+
+<%= render :partial => 'shared/crate_end' %>

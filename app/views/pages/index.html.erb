@@ -1,0 +1,10 @@
+<h1>Blog-style pages</h1>
+<%= Page.description %>
+<% @pages.each do |page| %>
+    <%= render :partial => "blog_page",  :locals => { :page => page } %>
+	<hr/>
+<% end %>
+
+<br />
+
+<%= link_to 'New page', new_page_path %>

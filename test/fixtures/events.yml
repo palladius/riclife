@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  summary: MyString
+  description: MyText
+  venue_id: 1
+  location: MyString
+  start: 2009-11-21 19:46:52
+  end: 2009-11-21 19:46:52
+  repeats: false
+  organizer_id: 1
+  class: MyString
+  status: MyString
+
+two:
+  summary: MyString
+  description: MyText
+  venue_id: 1
+  location: MyString
+  start: 2009-11-21 19:46:52
+  end: 2009-11-21 19:46:52
+  repeats: false
+  organizer_id: 1
+  class: MyString
+  status: MyString

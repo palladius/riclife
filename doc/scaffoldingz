@@ -1,0 +1,6 @@
+
+
+$ script/generate scaffold notes title:string description:text active:boolean deadline:date
+$ script/generate scaffold library name:string notes:text location:string
+$ script/generate scaffold -c Riclocation name:string description:text x:string y:string address:string
+$ script/generate controller Site index docs rss

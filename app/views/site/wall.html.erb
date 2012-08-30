@@ -1,0 +1,25 @@
+<h1>Wall</h1>
+
+<p>You: <b><%= @you %></b>
+<p>Your status: <b><%= @you.feed2 rescue "No Feed for you: #{$!}" %></b>
+<p>You follow: <%= @you.followeds rescue "ERR followeds() TBIY " %>
+<p>You are followed by: <%= @you.followers rescue "followers() TBIY " %>
+
+<% Person.find(:all, :order => 'updated_at DESC' ).each do |p| 
+	if p.feed %>
+	<table border='0'>
+		<tr>			
+			<td>
+				<%= image_tag("people/#{p.photo_name}", :height => 50 )  %>
+			</td>
+			<td>
+				<%= link_to(p.to_html,p) %> <%= p.feed2 rescue "NoFeed: #{$!}" %> <br/>
+				<font color='gray'><small><i>
+					(<%= p.updated_at %>)
+					</i></small></font>
+			</td>
+		</tr>
+		<hr/>
+<%  end 
+   end
+%>

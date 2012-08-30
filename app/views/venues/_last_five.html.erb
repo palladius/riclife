@@ -1,0 +1,11 @@
+<%
+	@max = 4
+	@last_venues = Venue.find(:all, :order => 'updated_at DESC', :limit => @max)
+%>
+<div class='last_five_venues' >
+	<small>Last <%=@max%> venues:
+	<% @last_venues.each{|venue| %>
+		<%= link_to(venue,venue) %>
+	<% } %>
+	</small>
+</div>

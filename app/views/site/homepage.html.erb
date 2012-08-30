@@ -1,0 +1,37 @@
+
+<h2>
+	Hi, <b><%= link_to(get_user.to_s.capitalize,get_user) rescue "getUser err: #{$!}"%></b>
+	from  <%=link_to(get_user.venue,get_user.venue) rescue "'get_venue error: #{$!}" %>
+</h2>
+
+UpdFd: <%= render :partial => 'people/update_feed' %>
+
+<table border='0'>
+	<tr>
+		<td valign='top' >
+			<%= render :partial => 'events/next_events' %>
+		</td>
+		<td valign='top' >
+			<%= render(:partial => 'people/about_you', :locals => { :person => get_user.person }  ) %>
+		</td>
+	</tr>
+	<tr>
+		<td valign='top' >
+			<%= render :partial => 'projects/my_projects' %>
+		</td>
+		<td valign='top' >
+			<%= render :partial => 'people/last_subscriptions'   %>
+		</td>
+	</tr>
+	<tr>
+		<td valign='top' >
+			<%= render :partial => 'calendars/my_calendars' %>
+		</td>
+		<td valign='top' >
+			<%= render :partial => 'people/feed'   %>
+		</td>
+	</tr>	
+</table>
+
+<%= link_to 'More on the Stats', '/site/stats' %>
+

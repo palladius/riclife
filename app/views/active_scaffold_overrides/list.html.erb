@@ -1,0 +1,23 @@
+<%= render :super %>
+<% if( RAILS_ENV == 'development' ) %>
+	<div class='riccardo development' >
+		<h4>Riccardo Override</h4>
+
+<p>		List Override Ric in <tt>app/views/active_scaffold_overrides</tt>
+	
+<p>	
+		<b><%= params[:controller].capitalize %> Description</b>: 
+		<i>""
+			<%= Person.description rescue "Error: #{$!}" %>
+		""</i>
+	
+<pre>
+	Controller: <%= params[:controller] %> (class <%= params[:controller].class %>)
+	Model: <%= params[:model] %>
+	Self2: <% self %>
+	Columns: <%= active_scaffold_config.show.columns.map{|x| x.name }.join ', ' %>
+</pre>
+	</div>
+<% end %>
+
+<%#= render :super %>

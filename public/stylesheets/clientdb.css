@@ -1,0 +1,257 @@
+/*
+	scaffold.css enriched and modified, yet separated from original 
+	and put into another CSS
+	
+*/
+
+.debug {
+	color: black;
+	border: 1px dashed red;
+	font-size: 9px;
+}
+
+
+.development {
+	color: teal;
+	border: 1px dashed blue;
+  	background-color: #aaf;
+	/* font-size: 9px; */
+}
+
+#flash-notice {
+  color: green;
+  /* style="color: green" */  
+}
+
+.error {
+	color: red;
+	/*font-size: 9px;*/
+}
+
+.warning {
+	color: purple;
+	/*font-size: 9px;*/
+}
+
+h1 {
+	color: teal;
+}
+
+h1.sober {
+	color: black;
+}
+
+h2,h3,h4 {
+  color: navy
+}
+
+.small-box{
+  width: 35%;
+  float: center;
+  text-align: left;
+  vertical-align: top;
+  background-color: #f7a;
+}
+
+.inactive, tr.inactive, tr.inactive>td {
+	font: oblique  0.9em Arial, sans-serif;
+	font-color: #ccc;
+	border: 0px dashed red;
+	background-color: #f00;
+	font-style:italic;
+}
+
+tr.scaffold_alternate_head {
+	background-color: #ccf;
+}
+
+tr.scaffold_alternate_row_1 {
+	background-color: #eef;
+}
+
+tr.scaffold_alternate_row_2 {
+	background-color: #fff;
+}
+
+
+.foot {
+		background-color: #afa;
+}
+
+#header {
+	/* background-color: #faa; */
+	font-size: x-small;
+
+}
+
+.category {
+	font-style:italic;
+	color: #a00 ;
+}
+
+.user {
+	color: purple;
+	font-style:italic;
+}
+
+
+
+.login {
+	font-size: -2px;
+	font-color: blue;
+}
+
+.show-div-head {
+  color: #000000;
+  font-size: large;
+  font-weight: bold;
+  line-height: 150%;
+}
+
+.show-head {
+  font-weight: bold;
+}
+
+.client-title a {
+  color: #000099;
+}
+
+.client-header1 {
+  color: #000099;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;  
+}
+
+.contact-title a {
+  color: #990066;
+}
+
+.contact-header1 {
+  color: #990066;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+.contact-header2 {
+  font-size: large;
+  line-height: 120%;
+}
+
+.client-position-title a {
+  color: #003333;
+}
+
+.client-position-header1 {
+  color: #003333;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+
+.role-title a {
+  color: #6600CC;
+}
+
+.role-header1 {
+  color: #6600CC;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+/* TODO delete these styles and rename auth to role */
+.authority-title a {
+  color: #6600CC;
+}
+.authority-header1 {
+  color: #6600CC;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+.provider-title a {
+  color: #990000;
+}
+
+.user-title a {
+  color: #8B0000;
+}
+
+.user-header1 {
+  color: #8B0000;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+.category-title a {
+  color: #3300FF;
+}
+
+.category-header1 {
+  color: #3300FF;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+.keyvalue-title a {
+  color: #330033;
+}
+
+.keyvalue-header1 {
+  color: #330033;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+.salutation-title a {
+  color: #330000;
+}
+
+.salutation-header1 {
+  color: #330000;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+#whole_page {
+  /*	background-color: green ; */
+}
+
+.whole_page_development {
+	/* background-color: #ff0; */
+}
+
+.whole_page_test {
+	background-color: #fee;
+}
+
+.whole_page_development {
+	background-color: #ffd;
+}
+
+.whole_page_production {
+  /* Nothing here: its production! White is ok*/
+}
+
+ul {
+padding: 2px;
+}
+
+.search-results {
+  margin-left: 30px;
+  margin-top: 0px;
+}
+
+.search-header1 {
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 200%;
+}

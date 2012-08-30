@@ -1,0 +1,11 @@
+<span class="comment" >
+  <% if comment %>
+	COMM FANCY		
+	  <%= link_to( action_icon('edit'), { :action => "edit", :id => comment } )  %>
+	  <%= link_to( comment, comment )%>
+	  <%= snippet_column(comment) rescue "err: #{$!}"%>
+  <% else %>
+	<i class='error'>none</i>
+    <%= "ERORE!!! Comment NON ESISTE" unless comment %>
+  <% end %>
+</span>

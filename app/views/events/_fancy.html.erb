@@ -1,0 +1,30 @@
+<!-- fancy event snippet -->
+<% 
+	event_creator = event.calendar.person rescue "?? #{$!}"   
+	initials = event.calendar.person.initials rescue "Initials23Err: #{h( $!).italic} (creator.class=#{event_creator.class})" 
+%>
+<%# initialz = event_creator.initials rescue "In?? #{$!}"   %>
+<span class='event <%='inactive' if event.past? %>' >
+  <table>
+	<tr>
+		<td width='80'>
+			<%= photo_name_column(event, 40, 'icon_path') %>
+		</td>
+		<td>
+			<b><%= link_to event,event %></b> <br/> 
+			(
+			 <%= render :partial => 'venues/fancy', :locals => { :venue => event.venue } %>	 ,
+		 	<i> 
+				<%= 'in' unless event.past? %> <%= distance_of_time_in_words_to_now(event.tstart) %> <%= 'ago' if event.past? %>
+			</i> 		
+		)
+		by <span class='person'>
+			<%# event_creator = event.calendar.person rescue "CreatorErr: #{$!}"   %>
+			<%#= event_creator.class rescue "?? #{$!}" %>
+			<%= initials  rescue "Initials2OldErr: #{h $!}" %>
+			<%= link_to(initials,event_creator)  rescue "LinkCreator: #{h $!}" %>
+		</span>
+	  </td>
+	</tr>
+  </table>
+</span>

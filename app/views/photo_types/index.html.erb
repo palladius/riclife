@@ -1,0 +1,24 @@
+<h1>Listing photo_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Active</th>
+  </tr>
+
+<% @photo_types.each do |photo_type| %>
+  <tr>
+    <td><%=h photo_type.name %></td>
+    <td><%=h photo_type.description %></td>
+    <td><%=h photo_type.active %></td>
+    <td><%= link_to 'Show', photo_type %></td>
+    <td><%= link_to 'Edit', edit_photo_type_path(photo_type) %></td>
+    <td><%= link_to 'Destroy', photo_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New photo_type', new_photo_type_path %>

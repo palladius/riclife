@@ -1,0 +1,9 @@
+<span class="event">
+  <b>
+    <%= link_to project, project %>
+  </b>
+  <% Note.find_all_by_project_id(project.id).each{ |n| %>
+    <%= link_to n,n %>
+  <%  } %>
+
+</span>

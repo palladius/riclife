@@ -1,0 +1,48 @@
+<%= render( :partial => "notes/quick_add" ) rescue "Comment Err: #{h( $!.to_s).pre}"%>
+<h1>People</h1>
+
+<h2>Ultimi inseriti</h2>
+Tabella fatta a mano..
+<table>
+  <tr>
+    <th>Opts</th>
+    <th>Person</th>
+    <th>B-Day</th>
+    <th>Home</th>
+    <th>Work</th>
+    <th> <%= image_tag( 'icons/stars/yellow.png', :height => 15)%> Star </th>
+    <th>Male</th>
+    <th></th>
+    <th>Virtual</th>
+    <th>Tags</th>
+  </tr>
+<% @last_people.each do |person|  %>
+	  <tr>
+		<td>
+			<%= magic_links(person,'crud') %>
+		</td>	
+	    <td><%= name_surname_column(person) %></td>
+	    <td><%= h( person.birthday ) if person.birthday? %></td>
+	    <td class='venue'><small class='small venue'><%= link_to(person.venue,person.venue) unless person.venue.nil? %></small></td>
+	    <td class='venue'><small><%= link_to(person.work_venue,person.work_venue) unless person.work_venue.nil? %></small></td>
+	    <td><%= togglable_checkbox(person,'starred', starred_column(person) ) %></td>
+		<td><%= togglable_checkbox(person,'male','Maschio') %></td>
+	    <td><%#= togglable_checkbox(person,'published','published') %></td>
+	    <td><%= togglable_checkbox(person,'virtual') %></td>
+	    <td>
+			<%#= render_tags(person) #.tags #(person) %>
+			<%= render :partial => "tags/link",  :locals => { :tags => person.tags }
+			%>
+			
+		</td>
+	  </tr>
+<% end %>
+</table>
+<br />
+<%= link_to 'New person', new_person_path %>
+
+<h2>ActiveScaffold</h2>
+
+	<%= render( :active_scaffold => 'people' ) rescue 'render tutti err567'%>
+<%#= render( :active_scaffold => 'people', :constraints => { :id => @person.id } ) rescue 'render me err568'%>
+

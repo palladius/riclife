@@ -1,0 +1,15 @@
+# Created a group where I belong correctly and Brian doesnt to test it
+# the its easy to crrect :)
+
+# People who can be root.
+# # Togli gcal appena puoi, non andava credo solo per apache restart nn fatto
+riclife-admins: riccardo fabio  gcal
+
+riclife-users: pemydio norsi test1 guest cielcio gcal \
+	riccardo fabio  gcal \
+	fmattei rbellosi ridge
+
+# People who can access the API
+riclife-apipeople: api testapi guest  \
+    riccardo fabio  gcal \
+	fmattei rbellosi ridge

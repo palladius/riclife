@@ -1,0 +1,30 @@
+<%#=render :partial => "comments/add_comment_form",  :locals => { :model => @venue } rescue "Comment Venue XCPT: #{$!}" %>
+<% venue_info = { 
+	"Address" => @venue.address,
+	} 
+%>
+<%= magic_links(@venue, 'crud', :verbose => true) %>
+  
+	<h1><%= @venue %></h1>
+<%= name_column(@venue) %>
+<div class="venue_icon" align='right' valign='top' >
+  <%= icon_magic(@venue, 'icon_path',  200) rescue 'err fotonamecol' %>
+</div>
+
+<p>
+	<b>Address</b>: 
+		<%=link_to(@venue.address, google_maps(@venue.address)) %>
+<p>
+	<b>Geo-IP</b>: 
+		<%= [@venue.lat,@venue.lng].join(' ; ') %>
+		(roughly <%= your_distance_column(@venue) %> from here)
+		<%= gmap_column(@venue) %>
+		
+<p>
+	<b>Description</b>: 		<%= @venue.description %>
+
+<p>
+	<b>Venue Type</b>: 		<%= link_to(@venue.venue_type,@venue.venue_type) %>
+	
+	<p>
+		<b>Photo</b>: 		<%= link_to(@venue.icon_path,@venue.icon_path) %>

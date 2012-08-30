@@ -1,0 +1,30 @@
+<div class='nifty'>
+	<% form_tag(:controller => "importer", :action => "import", :method => "get", :class => "nifty_form") do %>
+		<table border="0" cellspacing="0" cellpadding="0" >
+			<tr>
+				<th>
+					<h1>Import partial</h1>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<%= label_tag(:action, "Action to import") %>
+				</td>
+				<td>
+					<%= select_tag(:city_id,  options_for_select( $services_redundant.map{|x| [x,x] } , 'default boh'  )  ) %> 
+				</td>			
+			</tr>
+			<tr>
+				<td>
+					<%= label_tag(:content, "Content to be imported:") %>  
+				</td>
+				<td>
+					<%= text_area_tag(:content) %>  
+				</td>			
+			</tr>
+		</table>
+
+		<%= hidden_field_tag(:hidden_greeting, "cazzo guardi stronzo? Usa la form e non cercare di fare iniezioni pericolose.. grazie") %> 
+		<%= submit_tag("Magic Import!") %> 
+	<% end %>
+</div>

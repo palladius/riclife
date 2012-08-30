@@ -1,0 +1,24 @@
+<% form_for @gms do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :from_id %><br />
+    <%= f.text_field :from_id %>
+  </p>
+  <p>
+    <%= f.label :to_id %><br />
+    <%= f.text_field :to_id %>
+  </p>
+  <p>
+    <%= f.label :unread %><br />
+    <%= f.check_box :unread %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

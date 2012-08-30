@@ -1,0 +1,36 @@
+<%# title "Loans" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Quantity</th>
+    <th>People involved</th>
+    <th>Due</th>
+  </tr>
+  <%
+ 	sum = 0
+	for loan in @loans 
+		sum += loan.quantity rescue 0
+  %>
+    <tr>
+      <td>
+  		<%=title_column(loan) %>
+		<%=solved_column loan %>
+	    <%=starred_column( loan) %>
+	  </td>
+      <td><%=quantity_column( loan) %></td>
+      <td><%=people_involved_column loan %></td>
+      <td><%=h loan.date_end %></td>
+      <td>
+		<%#= link_to "Show", loan %>
+      	<%= link_to "Edit", edit_loan_path(loan) %>
+      	<%= link_to "Del", loan, :confirm => 'Are you sure?', :method => :delete %>
+	  </td>
+    </tr>
+  <% end %>
+	<tr>
+		<td>Sum:
+		<td><%=(sum) %>
+</table>
+
+<p><%= link_to "New Loan", new_loan_path %></p>

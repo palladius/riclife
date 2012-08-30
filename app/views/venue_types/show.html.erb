@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @venue_type.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @venue_type.description %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @venue_type.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_venue_type_path(@venue_type) %> |
+<%= link_to 'Back', venue_types_path %>

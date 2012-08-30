@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  followed_id: 1
+  notes: MyString
+  importance: 1
+
+two:
+  user_id: 1
+  followed_id: 1
+  notes: MyString
+  importance: 1

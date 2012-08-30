@@ -1,0 +1,29 @@
+#!/bin/bash
+
+	# $Id: cp-live-stuff-to-svn 1430 2010-06-08 12:06:01Z riccardo $
+
+VER=1.1b
+
+#set -x
+cp /var/www/capistrano/riclife/current/db/production.sqlite3 /home/riccardo/svn/ricdev/projects/riclife/db/ && 
+ cp -R /var/www/capistrano/riclife/shared/system/upload/ /home/riccardo/riclife/system/ &&
+ svn add /home/riccardo/svn/ricdev/projects/riclife/system/upload/photos/*/* 
+
+FRASE_COMMIT=$( svn commit \
+		/home/riccardo/svn/ricdev/projects/riclife/db/production.sqlite3 \
+		/home/riccardo/svn/ricdev/projects/riclife/system/ \
+		/home/riccardo/svn/ricdev/projects/riclife/bin/ \
+		-m"
+		Automatico dal crontab@ricvm6 ogni mezzora che chiama il mitico 
+		bin/cp-live-stuff-to-svn v.$VER , 
+	 	che copia	da produzione su SVN le foto e il DB poi committa il tutto. 
+		Sono DIABBOLICO. 
+		+riclife +craic +cool +crontab
+		" )
+
+if echo "$FRASE_COMMIT" | egrep '^Committed revision' ; then
+        echo RicLife $0 v$VER, new commit detected: $FRASE_COMMIT
+        ~/bin/jabba "svn updatato RicLife.production (db o foto): $FRASE_COMMIT"
+else
+        rosso RicLife commit: Nulla di nuovo sul fronte occidentale..
+fi

@@ -1,0 +1,32 @@
+<%
+	# him = @person.male ? 'him' : 'her'
+	# his = @person.male ? :his : :her
+%>
+	<h1><%= to_html(@friendship,50) rescue nil %></h1>
+
+	<p>
+	  <b>tags:</b>
+	  <%=h @friendship.tags %>
+	</p>
+	<p>
+	  <b>Follower:</b>
+	  <%=link_to(@friendship.follower,@friendship.follower) %>
+	</p>
+	<p>
+	  <b>Followed:</b>
+	  <%=link_to(@friendship.followed,@friendship.followed) %>
+	</p>
+	<%= render_tags(@friendship) %>
+	<p>
+	  <b>Notes:</b>
+	  <%=h @friendship.notes %>
+	</p>
+	<p>
+	  <b>reciprocated?</b>
+	<%= reciprocated_column(@friendship) %>
+	</p>
+	
+
+
+	<%= link_to 'Edit', edit_friendship_path(@friendship) %> |
+	<%= link_to 'Back to Index', friendships_path %>

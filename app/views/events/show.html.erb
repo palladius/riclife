@@ -1,0 +1,5 @@
+<%#= render :partial => "comments/comment_form",  :locals => { :model => @event } rescue "Comment Event INET XCPT: #{$!.to_s.pre}"%>
+<%= render( :partial => "comments/add_comment_form",  :locals => { :model => @event } ) rescue "Comment Event RIC XCPT: #{pre $!.to_s}"%>
+<%= render( :partial => "comments/show_entity_comments",  :locals => { :model => @event , :render_notes => "Called by Event"} ) rescue "EntityComments Err (#{$!})"%>
+<h1>Super- Event Show TBD</h1>
+<%#= render :super rescue "Event.super() Error (soccmel!): #{$!}"%>

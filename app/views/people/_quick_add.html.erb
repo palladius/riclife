@@ -1,0 +1,11 @@
+<div class='person'>
+	<% @person = Person.new %>
+	<% form_for(@person) do |f| %>
+	  <%= f.error_messages %>
+	  <p>
+	    <%= f.label :nickname %>
+	    <%= f.text_field :nickname %>
+	    <%= f.submit 'Quick Person' %>
+	  </p>
+	<% end rescue "Exception with Person.QuickAdd: #{$!}" %>
+</div>

@@ -1,0 +1,35 @@
+<% 
+	@user = current_user 
+	user = @user
+	person = user.person rescue nil
+	current_user_photo = "<img src='/images/people/#{@user.person.photo_name rescue 'nil.jpg' }' align ='right' height='70' >"
+%>
+<div class="user_info" >
+  <table border='0' width='210' ><tr><td>
+	<span class="small user_info">
+	<% if @user == nil %>
+		You're <b>anonymous</b>. 
+		
+		Please 
+		<%= link_to 'login here', '/login' %> or
+		<%= link_to 'signup', '/signup' %>
+		<%= image_tag 'anonymous/anonimo.png', :height => '50'	%>
+		<%#= link_to current_user_photo,user %>
+	<% else %>	
+	    <%#= user_icon() rescue "err user icon 1: #{$!}" %>
+		<%= link_to current_user_photo,person %>
+	      Bella lí 
+			<span class='user'><%= link_to(user.to_label,user) rescue "usererr1: #{$!}"%></span> <br/>
+		   <span class='person'><%= link_to(person,person) rescue "usererr2: #{$!}"%></span>   <br/>
+		<%=( person.venue ? link_to(icon("icons/home"), person.venue) : '-' ) rescue "usererr: #{$!}" %>
+		<%=( person.work_venue ? link_to(icon("gmaps/industry"), person.work_venue) : '-') rescue "usererr: #{$!}" %>
+		is 
+			<I><%= person.feed2 rescue "Feed err: #{$!}" %></I> 	
+		<p>
+			<%= icon( 'models/logout') %>
+			<%= link_to 'logout', '/logout' %> 
+		</p>
+	<% end %>
+    </span>
+  </td></tr></table>
+</div>

@@ -1,0 +1,7 @@
+<h2>shared/_debug.html.erb</h2>
+<div class='debug'>
+  <b>Current ctrler</b>: <%= @controller %> (class: <%=  @controller.class %>)
+  
+  <h2>Self</h2>
+  <pre><%= h self.inspect.gsub(', ',", \n") %></pre>
+</div>

@@ -1,0 +1,23 @@
+<html>
+   <head>
+      <title>Test</title>
+   </head>
+
+   <body>
+		 <h1>
+			<%= image_tag( 'models/person.png' , :height=>25 ) %> 
+			Map of People for '<%= current_user %>'
+		</h1>
+      <%= @map.to_html %>
+      <%= @map.div(:width => 800, :height => 600) %>
+	
+	<h2>Some note on people for '<%= @user %>'</h2>
+	<% @people.each { |p| %>
+	  <li>
+		<%= render :partial => 'people/fancy', :locals => { :person => p , :icon_size => 42 } %> - 
+		<%= render :partial => 'venues/fancy', :locals => { :venue => p.venue,      :type => 'home' }  if p.venue %>
+		<%= render :partial => 'venues/fancy', :locals => { :venue => p.work_venue, :type => 'work' }  if p.work_venue %>
+	  </li>
+	<% } %>
+   </body>
+</html>

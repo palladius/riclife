@@ -1,0 +1,14 @@
+<html>
+   <head>
+      <title>Test</title>
+      <%#= GMap.header %>
+   </head>
+
+   <body>
+		 <h1> Gmaps Index (of Venues) </h1>
+	Provo a metterci sia i luoghi che casa tua e il tuo lavoro :)
+      <%= @map.to_html %>
+      <%= @map.div(:width => 800, :height => 600) %>
+
+   </body>
+</html>

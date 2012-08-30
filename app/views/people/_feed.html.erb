@@ -1,0 +1,6 @@
+<div class='feed'>
+	<span class='cool_feed' style='font-family:fantasy; font-size: 15px' >
+		<%=image_tag('icons/quotes.png') %>
+		<%=h( person.feed.capitalize ) rescue "NoFeed: #{$!}" %>
+	</span>
+</div>

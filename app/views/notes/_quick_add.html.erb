@@ -1,0 +1,15 @@
+<%#  @note = Note.new %>
+<div class='note' >
+	<%#  form_tag('/notes/new' ) do %>
+	<% form_for( Note.new ) do |f| %>
+	  <p> NON VA TBD
+	    <%= f.label :title %> 
+	    <%#= f.text_field :title , 'your task here' %>
+	    <%#= f.text_field_tag 'note[title]', "your task title here", :onfocus => "document.getElementById('title').value = ''" %>
+	    <%= text_field_tag 'title', "your task title here", :onfocus => "document.getElementById('title').value = ''" %>
+	    <%= f.label :active %>
+	    <%= f.check_box :active, :default => true %>
+	    <%= f.submit "Add Note" %>
+	  </p>
+	<% end %>	
+</div>

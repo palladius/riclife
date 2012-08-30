@@ -1,0 +1,9 @@
+<%= render :partial => 'shared/crate_begin', :locals =>
+  { :title => "My Calendars", :icon_path => 'models/calendar.png' }
+%>
+  <% Calendar.find_all_by_person_id(current_user.person.id).each{ |x| %>
+    <li>
+      <%= render :partial => 'calendars/fancy', :locals => { :calendar => x } %>
+    </li>
+  <% } %>
+<%= render :partial => 'shared/crate_end' %>

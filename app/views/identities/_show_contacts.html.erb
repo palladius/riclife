@@ -1,0 +1,36 @@
+<%
+# http://github.com/cardmagic/contacts
+# Contacts.new(:gmail, login, password).contacts
+# Contacts.new(:hotmail, login, password).contacts
+# Contacts.new(:yahoo, login, password).contacts
+
+	$visualize_unimportable_identities = false
+
+	#my_identity = identity # inutile... giusto per dsapere che var ho :)
+	app = identity.app rescue nil
+	contacts = (identity.importable? ? 
+#		Contacts.new(app.name.to_sym ,  identity.login,  identity.password ).contacts :
+		Contacts.guess( identity.login,  identity.password ).contacts :
+		[ "Unimportable identity: #{identity}"]
+	) rescue ["Error GEM Contacts with identity #{identity}:\n #{$!}" ] 
+	$spiegone = ' is not importable (maybe it lacks login/pass? Maybe its not a gmail/yahoo/hotmail?)'
+%>
+<div class='identity' >
+	<% if identity.class == Identity && identity.importable? %>  
+		<%= icon_magic(app ,'icon',50) %> 
+		<p>IDentityName:	<b><%= identity.login rescue "Unknown Name: #{$!}"%></b>
+		<p>Type: 
+			<tt class='app' >
+				<%= identity.app.name rescue "Unknown app: #{$!}" %>
+			</tt>
+		<p>
+			<%= imported_contacts_visualize(contacts) %>
+		</p>
+	<% else  %>
+		<% 	if $visualize_unimportable_identities  %>
+			<p class="error" >
+				<%= link_to(identity.to_s + $spiegone +  icon_magic(app ,'icon',15) , identity)%>
+			</p>
+		<% end %>
+	<% end %>
+</div>

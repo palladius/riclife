@@ -1,0 +1,12 @@
+<div class='venue'>
+	
+	<% @venue = Venue.new %>
+	<% form_for(@venue) do |f| %>
+	  <%= f.error_messages %>
+	  <p>
+	    <%= f.label :address %>
+	    <%= f.text_field :address %>
+	    <%= f.submit 'Quick Venue' %>
+	  </p>
+	<% end rescue "Exception with Venue.QuickAdd: #{$!}" %>
+</div>

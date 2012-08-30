@@ -1,0 +1,28 @@
+<h1>Editing event_attendee</h1>
+
+<% form_for(@event_attendee) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :calendar_id %><br />
+    <%= f.text_field :calendar_id %>
+  </p>
+  <p>
+    <%= f.label :person_id %><br />
+    <%= f.text_field :person_id %>
+  </p>
+  <p>
+    <%= f.label :confirmed %><br />
+    <%= f.check_box :confirmed %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_field :notes %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @event_attendee %> |
+<%= link_to 'Back', event_attendees_path %>

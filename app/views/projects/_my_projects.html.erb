@@ -1,0 +1,9 @@
+<%= render :partial => 'shared/crate_begin', :locals =>
+  { :title => "My Projects", :icon_path => 'models/project.png' }
+%>
+  <% Project.by_person(current_user.person).each{ |x| %>
+    <li>
+      <%= render :partial => 'projects/fancy', :locals => { :project => x } %>
+    </li>
+  <% } %>
+<%= render :partial => 'shared/crate_end' %>

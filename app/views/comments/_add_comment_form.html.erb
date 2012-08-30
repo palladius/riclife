@@ -1,0 +1,21 @@
+<div class='comment fancy develop' >
+	<span class ='title' >
+		<h5>
+			Comment Ric on <u><%= @model.to_s rescue "Model.ToS Error: #{$!}" %></u>
+		</h5>
+		
+		<% 	form_tag '/comments/add_comment', :action => 'add_comment' do %>
+		  <%= text_field   'comment', 'title', :value => "Your comment here :)" %>
+		  <%= text_field 'comment', 'body', :value => "Vuoto per ora TBD #{model.type rescue "ModelTypeException: #{$!}" }" %>
+		  <%= text_field 'commentable', 'commentable_type', :value => (model[:type] rescue "Project" ) %>
+		  <%= text_field 'commentable', 'commentable_id',   :value => (model.id rescue "1" ) %>
+		  <%#= hidden_field 'commentable', 'commentable_type', :value => ( model.type rescue "Project" ) %>
+		  <%#= hidden_field 'commentable', 'commentable_id',   :value => (model.id rescue "1" ) %>
+		 <%= submit_tag 'Add Comment Ric!' %>
+		<% 	end %>
+	<small>
+		fai un partial chiamato con this che autodeduca modello e id
+		e metti un bel CSS per i modelli o per le modello-div plz
+	</small>
+</div>
+<%= render( :partial => "comments/show_entity_comments",  :locals => { :model => @event , :render_notes => "Called by CommentForm"} )  rescue "EntityComments Err (#{$!})"%>

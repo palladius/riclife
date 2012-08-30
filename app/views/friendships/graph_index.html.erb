@@ -1,0 +1,28 @@
+<h1>Graphs of Identities</h1>
+
+Click here for:
+
+<% %w{ update_dotsvg graph_family }.each do |graph_name| %>
+	<p>
+		<b><%= graph_name.camelize %></b>:
+		<%= link_to( 'HTML/SVG' , '/friendships/'+graph_name ) %>
+		<a href='/friendships/<%= graph_name %>.xml'>XML pulito/SVG!!</a>
+		<a href='/friendships/<%= graph_name %>.png'>Image PNG!!</a>
+		<a href='/friendships/<%= graph_name %>.jpg'>Image JPeG!!</a>
+	</p>
+<% end  %>
+
+<h2>Identities</h2>
+
+Tu sei: 
+<%= current_user %>
+
+<h3>Graph all.each.dot</h3>
+
+<pre><%= @friendships.map{ |fs| fs.to_dot }.join("\n") rescue nil %></pre>
+
+<h3>Graph Identity.dot </h3>
+
+<pre>
+<%= Friendship.to_dot rescue "Dot3: #{$!}" %>
+</pre>

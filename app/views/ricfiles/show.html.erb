@@ -1,0 +1,28 @@
+<p>
+  <b>Host:</b>
+  <%=h @ricfile.host %>
+</p>
+
+<p>
+  <b>Path:</b>
+  <%=h @ricfile.path %>
+</p>
+
+<p>
+  <b>Uri:</b>
+  <%=h @ricfile.URI %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%=h @ricfile.tags %>
+</p>
+
+<p>
+  <b>Metatags:</b>
+  <%=h @ricfile.metatags %>
+</p>
+
+
+<%= link_to 'Edit', edit_ricfile_path(@ricfile) %> |
+<%= link_to 'Back', ricfiles_path %>

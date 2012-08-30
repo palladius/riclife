@@ -1,0 +1,58 @@
+<% $uninteresting_fields = %w{ created_at updated_at} %>
+<h1><%= @person rescue nil %></h1>
+	
+	<%= magic_links(@person, 'crud', :verbose => true) %>
+	
+	<h2>Normal Anagraphics</h2>
+	<div id="person_anagraphics">
+		<p>
+		  <b>You</b> 
+      		<%= render :partial => 'people/fancy', :locals => { :person => @person } %>
+		</p>
+		<p>
+		  <b>Home</b> 
+		 <%= render :partial => 'venues/fancy', :locals => { :venue => @person.venue } %>
+		</p>
+		<p>
+		  <b>Work</b>
+		 <%= render :partial => 'venues/fancy', :locals => { :venue => @person.work_venue } %>
+		</p>
+	</div>
+	
+	<h2>Everything</h2>
+	<div id="person_everything">
+		<table border='1'>
+		<% @person.attributes.sort.each {|k,v| 
+			if v.to_s != '' && ! $uninteresting_fields.include?(k)
+			%>
+			<tr>
+			  <td> <tt><%=k %></tt> 
+			  <td>  <b><%=v %></b> 
+			</tr>
+		<% end
+		} 
+		%>
+		</table>
+	</div>
+	
+		<h2>Comments (prova)</h2>
+	<p>
+		<div class='comment'>
+			<% @person.comments.each do |comment| %>
+				<p>Comment(<%=comment.to_s%>)
+				  <%= render :partial => 'comments/fancy', :locals => { :comment => comment } rescue "Problemi col parziale dei commenti: #{$!}" %>
+				</p>
+			<% end rescue "boh"%>
+		</div>
+	<p>
+
+		<h2>Social</h2>
+		<div class ='social' >
+			<p><b>Feed</b>: 
+			  <span class='feed'>
+				<%= @person.feed.quote rescue '-' %>
+			  </span>
+			</p>
+		<%= render :partial => 'people/friends', :locals => { :person => @person } rescue "Friendship Partial Excpt: #{$!}" %>
+		</div>
+

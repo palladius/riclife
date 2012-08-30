@@ -1,0 +1,17 @@
+<% title "Gms" %>
+
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>From</th>
+  </tr>
+  <% for gms in @gms %>
+    <tr>
+      <td><%= subject_column( gms) %></td>
+      <td><%=link_to( gms.from, gms ) if gms.from %></td>
+      <td><%#=h gms.to %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Gms", new_gms_path %></p>

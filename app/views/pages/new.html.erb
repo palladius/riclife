@@ -1,0 +1,48 @@
+<h1>New page</h1>
+
+<%= render :partial => 'form' %>
+
+<% form_for(@page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+    <%#= f.text_field_with_auto_complete :post, :title %>
+    <%#= f.auto_complete_for :post, :title, :limit => 15, :order => 'created_at DESC' %>
+  </p>
+  <p>
+	Test autocompletamento...
+  <%= text_field_with_auto_complete :country, :name %>
+Person.Name (works!)
+  <%= text_field_with_auto_complete :person,  :name %>
+Person.name_surname
+<%#= text_field_with_auto_complete :person,  :name_surname %>
+
+Title (non va)
+  <%= text_field_with_auto_complete :title,   :title %>
+
+
+  </p>
+  <p>
+    <%= f.label :header %><br />
+    <%= f.text_area :header %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :tags %><br />
+    <%= f.text_area :tags %>
+  </p>
+  <p>
+    <%= f.label :person_id %><br />
+    <%= f.text_field :person_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end if false %>
+
+<%= link_to 'Back', pages_path %>

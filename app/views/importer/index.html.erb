@@ -1,0 +1,20 @@
+<%
+	# take me from helper
+	$services_redundant = %w{ mac_contacts ldif_contact todo_sh REDUNDANT_PUT_IN_HELPER_TBD tasks venues contacts }
+	# $s2 =  [["mac_contacts", "mac_contacts"], ["ldif_contact", "ldif_contact"], ["todo_sh", "todo_sh"], ["REDUNDANT_PUT_IN_HELPER_TBD", "REDUNDANT_PUT_IN_HELPER_TBD"]]
+	# $s3 = $services_redundant.map{|x| [x,x] }
+
+%>
+
+<h1>Importer Index</h1>
+
+	<small>
+		This page lets you import stuff via a comodessum TextArea.
+
+		// copio a man bassa da: http://guides.rubyonrails.org/form_helpers.html
+	</small>
+
+<%= render :partial => "importer/form" %>
+
+
+<p>Find me in app/views/importer/index.html.erb</p>

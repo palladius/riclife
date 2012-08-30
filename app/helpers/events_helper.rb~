@@ -1,0 +1,32 @@
+module EventsHelper
+
+  def tstart_column(r)
+    distance_of_time_in_words(Time.now, r.tstart, true )
+  end
+
+  def tend_column(r)
+    distance_of_time_in_words(Time.now, r.tend, true )
+  end
+
+  def duration_column(r)
+    distance_of_time_in_words(r.tstart, r.tend, true )
+  end
+
+  def summary_column(r)
+    r.summary +
+			link_to( 'ics', "/events/#{r.id}.ics", :link => '_blank')
+  end
+
+  def icon_column(r)
+    icon_magic(r, 'icon' , '25')
+  end
+
+  def list_row_class(record)
+    record.past? ? 'past' : 'future'
+  end
+
+  def repeats_column(r)
+    image_tag('icons/repeat.png', :height => 25) if r.repeats
+  end
+
+end
