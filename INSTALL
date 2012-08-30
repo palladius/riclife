@@ -1,0 +1,5 @@
+
+
+as sudoer:
+
+ bin/install-prerequisites.rb
