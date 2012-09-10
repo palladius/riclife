@@ -2,10 +2,13 @@
 # $Id$
 development:
   domain: localhost:3000
+  foo: bar-devel
 test:
   domain: test.host
+  foo: foo-test
 production:
   domain: riclife.palladius.eu
+  foo: baz-prod
 tutte:
   title: "Riclife, la mia applicazione per test sociali!"
   synopsis: |
@@ -13,3 +16,4 @@ tutte:
    che si propone seghe mentali varie tra cui anche social networking e maybe crawling
    tuipo che si collega col tuo account FB e scarica gli status degli amici e greppa magari parole per te interessanti :) 
   author: Riccardo Carlesso <riccardo.carlesso@gmail.com>
+
