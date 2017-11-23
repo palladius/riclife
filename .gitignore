@@ -2,4 +2,5 @@ db/*.sqlite3
 log/*.log
 *~
 .svn
+# This has your email and password :)
 config/smtp_gmail.yml

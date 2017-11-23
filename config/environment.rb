@@ -31,8 +31,14 @@ Rails::Initializer.run do |config|
   config.gem "calendar_date_select" # per le date
   config.gem "contacts" # per i contatti gmail, ...
   config.gem "geoip"    # automatic address resolution
-  config.gem "geokit" # per google maps
+  #config.gem "geokit" # per google maps
   config.gem "hpricot"  # something asks for it!
+  # icalendar gives error: 
+  # component.rb:206:in `generate_multi_setter': compile error (SyntaxError)
+  # {}component.rb:201: undefined (?...) sequence: /^[^"].*(?<!\\),.*[^"]$/
+  # {}component.rb:202: undefined (?...) sequence: /(?<!\\),
+  # https://github.com/icalendar/icalendar/issues/48
+  # seem to need icalendar v1.4.3
   config.gem "icalendar" # non ricordo
   config.gem "openrain-action_mailer_tls", :lib => "smtp_tls.rb", :source => "http://gems.github.com"
   config.gem "sqlite3"  # for naive DB... :)

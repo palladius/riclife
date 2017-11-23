@@ -20,7 +20,7 @@ GEM
     geokit (1.9.0)
       multi_json (>= 1.3.2)
     hpricot (0.8.6)
-    icalendar (1.5.2)
+    icalendar (1.4.3)
     json (1.8.6)
     multi_json (1.12.2)
     openrain-action_mailer_tls (1.1.3)
@@ -48,7 +48,7 @@ DEPENDENCIES
   geoip
   geokit
   hpricot
-  icalendar
+  icalendar (= 1.4.3)
   openrain-action_mailer_tls
   passenger
   rails (= 2.3.18)

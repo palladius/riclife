@@ -22,7 +22,7 @@ gem 'calendar_date_select'
 gem 'geoip'
 gem 'geokit'
 gem 'hpricot'
-gem 'icalendar'
+gem 'icalendar', '1.4.3'
 gem 'openrain-action_mailer_tls' # -s http://gems.github.com --no-ri --no-rdoc
 gem 'passenger'
 gem 'sqlite3'
