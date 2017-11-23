@@ -1,9 +1,9 @@
 
-# from 2012 its 2.3.12...
-RAILS_GEM_VERSION = '2.3.12' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.18' unless defined? RAILS_GEM_VERSION
 
-RICLIFE_VERSION =   "1.1.0 # SMTP TLS gmail ruscoric :)"
-RICLIFE_HISTORY =   "0.9.3 # updated to rails 2.3.5 e un sacco di altro.."
+RICLIFE_VERSION =   "1.2.0 # 2017-11-05 v2.3.18 and new stuff to make this work"
+RICLIFE_HISTORY =   "1.1.0 # 2012-MM-DD SMTP TLS gmail ruscoric :)" +
+		    "0.9.3 # 20YY-MM-DD updated to rails 2.3.5 e un sacco di altro.."
 
 require File.join(File.dirname(__FILE__), 'boot')
 #require 'icalendar-1.1.0/lib/icalendar'
