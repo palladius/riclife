@@ -17,4 +17,9 @@ run: bundle
 	script/server
 
 run-dev:
-	script/server -e development -p 3000
+	rake db:setup 
+	script/server
+
+tests:
+	@grep -q user_name config/smtp_gmail.yml || echo "T1. Please create config/smtp_gmail.yml"
+	echo .tables | sqlite3 db/development.sqlite3

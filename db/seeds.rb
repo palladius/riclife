@@ -10,7 +10,8 @@
  #script/generate scaffold -c app name:string description:text host_id:integer url:string
  # db_uri:string local_path:string svn_uri:string language:string
 
- require 'open-uri'
+
+require 'open-uri'
  
 ##########################################################################################
 ### CONF DATA
@@ -20,19 +21,16 @@
   'meeting', 'job travel', 'conference',   # work
   'trip' , '', 'trip'   # travels
 ]
-
 @arr_hosts = [ 'dev.palladius.eu', 'slartibartfast.heanet.ie' ]
-
 ### CONF DATA
 ##########################################################################################
 
 
 
-
 	# lo costruisce se NON esiste!!!
-@arr_hosts.each do |hostname|
-	Host.find_or_create_by_name(hostname)
-end
+#@arr_hosts.each do |hostname|
+#	Host.find_or_create_by_name(hostname)
+#end
 
 # Apps have changed since...
 # # Should create facebook and stuff
@@ -68,9 +66,14 @@ end
 #foreach user
   # create 2 calendars: personal (priv) and public (pub)
   # whenever you create a new user, trigger this func!
+
+#  1. Create users  
+User.create(
+  :login => 'riclife',
+  :password => '126tfshqNnTbq4br4',
+  :password_confirmation => '126tfshqNnTbq4br4',
+  :email => 'riclife@gmail.com' )
   
-  
-User.create( :login => 'riclife', :password => '126tfshqNnTbq4br4' ,  :password_confirmation => pwd, :email => 'riclife@gmail.com' )
 
 Page.create( 
   :title => 'Help', 
@@ -81,6 +84,6 @@ Page.create(
   City.create(
     :nomecitta => city,
     :sigla => city[0..1],
-    :regione => "Emilia-Romagna",    
+    :regione => "Emilia-Romagna"
   )
 }
