@@ -70,8 +70,7 @@ end
   # whenever you create a new user, trigger this func!
   
   
-pwd = '126tfshqNnTbq4br4'
-User.create( :login => 'riclife', :password => pwd,  :password_confirmation => pwd, :email => 'riclife@gmail.com' )
+User.create( :login => 'riclife', :password => '126tfshqNnTbq4br4' ,  :password_confirmation => pwd, :email => 'riclife@gmail.com' )
 
 Page.create( 
   :title => 'Help', 

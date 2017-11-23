@@ -1,5 +1,11 @@
 
-require '~/lib/ric.rb'
+#require '~/lib/ric.rb'
+def yellow(s)
+  "\033[0;34m#{s}\033[0m"
+end
+def pyellow(s)
+  print yellow(s)
+end
 
 $graph_dir        = RAILS_ROOT + "/out/"
 $central_person   = ENV["CENTRAL_PERSON_ID"] || 1       # riccardo :)

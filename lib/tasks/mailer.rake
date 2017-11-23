@@ -1,10 +1,10 @@
 
 # rake send_mailing
-require '~/lib/ric.rb'
+#require '~/lib/ric.rb'
 
-# def yellow(s)
-#    "\033[0;34m#{s}\033[0m"
-# end
+def yellow(s)
+  "\033[0;34m#{s}\033[0m"
+end
 
 desc "Send mailing attraverso 'rake send_mailing MAILING_ID=<tuoid>'.."
 task :send_mailing => :environment do

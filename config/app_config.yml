@@ -11,6 +11,7 @@ production:
   foo: baz-prod
 tutte:
   title: "Riclife, la mia applicazione per test sociali!"
+  foo-all: this should belong to all 3 deployments.
   synopsis: |
    Questa applicazione (testo cosi anche il pipe)
    che si propone seghe mentali varie tra cui anche social networking e maybe crawling
