@@ -1,5 +1,15 @@
 
+Simply you need to:
 
-as sudoer:
+    git clone <repo>
+    cp config/smtp_gmail.yml.example config/smtp_gmail.yml # and edit
+    rake db:setup
 
- bin/install-prerequisites.rb
+And you should be ready to go:
+
+    script/server
+
+
+# Obsolete
+
+#as sudoer launch `bin/install-prerequisites`

@@ -1,9 +1,12 @@
 
 RAILS_GEM_VERSION = '2.3.18' unless defined? RAILS_GEM_VERSION
 
-RICLIFE_VERSION =   "1.2.0 # 2017-11-05 v2.3.18 and new stuff to make this work"
-RICLIFE_HISTORY =   "1.1.0 # 2012-MM-DD SMTP TLS gmail ruscoric :)" +
-		    "0.9.3 # 20YY-MM-DD updated to rails 2.3.5 e un sacco di altro.."
+RICLIFE_VERSION =   "1.2.1a" #  TODO(ricc): learn to cat /VERSION  
+RICLIFE_HISTORY =   "" +
+    "1.2.1 # 2017-11-24 Fixed numer of things and got it to RUN! Also saved Gemfile.lock (when does it recapit to me!)" +
+    "1.2.0 # 2017-11-05 Rails v2.3.18 and new stuff to make this work " +
+	  "1.1.0 # 2012-MM-DD SMTP TLS gmail ruscoric :)" +
+    "0.9.3 # 20YY-MM-DD updated to rails 2.3.5 e un sacco di altro.."
 
 require File.join(File.dirname(__FILE__), 'boot')
 #require 'icalendar-1.1.0/lib/icalendar'

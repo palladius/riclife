@@ -19,6 +19,7 @@ gem 'geoip'
 gem 'geokit'
 gem 'hpricot'
 gem 'icalendar', '1.4.3'
+# sudo gem install openrain-action_mailer_tls -s http://gems.github.com --no-ri --no-rdoc
 gem 'openrain-action_mailer_tls' # -s http://gems.github.com --no-ri --no-rdoc
 gem 'passenger'
 gem 'sqlite3'
