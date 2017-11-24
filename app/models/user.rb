@@ -137,7 +137,7 @@ class User < ActiveRecord::Base
    # TBD verifica se esiste già uno con quella email!! Se no fallisce
     my_person = Person.create(
          :name     => login, 
-         :surname  => 'McAutoCreated', 
+         :surname  => 'Mc AutoCreated', 
          :nickname => login, 
          :email    =>     email, 
          :tags     =>     'virtual auto_created tmp person bot auto',

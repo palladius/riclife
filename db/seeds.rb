@@ -68,19 +68,30 @@ end
   # whenever you create a new user, trigger this func!
 
 #  1. Create users  
-User.create(
+root = User.create(
   :login => 'riclife',
   :password => '126tfshqNnTbq4br4',
   :password_confirmation => '126tfshqNnTbq4br4',
   :email => 'riclife@gmail.com' )
-  
+User.create(
+  :login => 'riccardo',
+  :password => 'provadev',
+  :password_confirmation => 'provadev',
+  :email => 'riccardo.carlesso@gmail.com' )
+
+if RAILS_ENV == 'development'
+  print yellow("Only in dev I activate the root account. Otherwise it's dangerous")
+  root.status = 'active'
+  root.save
+end
+
 
 Page.create( 
   :title => 'Help', 
   :abstract => "This page helps you districate through all these crazy things Riccardo did!"
 )
 
-%w{ ferrara bologna dublino }.each{|city|
+%w{ ferrara bologna dublino zurigo }.each{|city|
   City.create(
     :nomecitta => city,
     :sigla => city[0..1],

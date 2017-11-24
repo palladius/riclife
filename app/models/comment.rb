@@ -1,7 +1,7 @@
-
 =begin
+
   fighissimo, è polimorfico...
-  peccato che sia in vendor :-((()))
+  peccato che sia in vendor :-((
   
 =end
 class Comment < ActiveRecord::Base

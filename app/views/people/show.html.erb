@@ -87,8 +87,8 @@
 
 
 	
-	<!-- 
-		<h2>Comments (prova)</h2>
+	
+	<h2>Comments (prova)</h2>
 	<p>
 		<div class='comment'>
 			<% @person.comments.each do |comment| %>
@@ -98,7 +98,7 @@
 			<% end rescue "boh"%>
 		</div>
 	<p>
-	-->
+	
 
 	<h2 id='social' >Social</h2>
 		<%= link_to( image_tag('models/friendship.png', :height => 25, :border => 0) + "Follow #{him(@person) rescue 'him/her' }", 
@@ -131,7 +131,7 @@
 				:action      => "new", 
 				:person_id   => (@you_person.id rescue 4242),
 			#	:tags        => 'friends', 
-				:description       => "palleggiato da person#view ({{Person;#{@you_person.id}}}) and created by ''#{current_user}''"
+				:description       => "palleggiato da person#view ({{Person;#{@you_person.id  rescue 'ERROR WITH ID'}}}) and created by ''#{current_user}''"
 #				:importance => 31,
 #				:align => 'right'
 			) %>
