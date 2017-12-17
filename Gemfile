@@ -2,10 +2,6 @@
 
 source "https://rubygems.org"
 
-# see: https://devcenter.heroku.com/articles/ruby-versions
-# Examples:
-#ruby "2.2.2", :engine => "jruby", :engine_version => "9.0.0.0"
-
 # This is NOT maintained. See: https://bugs.ruby-lang.org/projects/ruby/wiki/ReleaseEngineering
 ruby "1.8.7"
 
