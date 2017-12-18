@@ -87,8 +87,9 @@ end
 
 
 Page.create( 
-  :title => 'Help' #, 
-#  :abstract => "This page helps you districate through all these crazy things Riccardo did!"
+  :title => 'Help' 
+# , :header => "This page helps you districate through all these crazy things Riccardo did!"
+# , :body => "Please look at the amazing code: https://github.com/palladius/riclife"
 )
 
 %w{ ferrara bologna dublino zurigo }.each{|city|
