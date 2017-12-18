@@ -1,0 +1,24 @@
+1. Looks like you cant rake setup from scratch:
+
+assume_migrated_upto_version(20100725084042, "db/migrate")
+   -> 11.6235s
+EventType.dflt_create( 1 <-- 'gig'): DEBUG --> 1
+EventType.dflt_create( 2 <-- 'concert'): DEBUG --> 2
+EventType.dflt_create( 3 <-- 'opera'): DEBUG --> 3
+EventType.dflt_create( 4 <-- 'theater'): DEBUG --> 4
+EventType.dflt_create( 5 <-- 'dinner'): DEBUG --> 5
+EventType.dflt_create( 6 <-- 'party'): DEBUG --> 6
+EventType.dflt_create( 7 <-- 'birthday party'): DEBUG --> 7
+EventType.dflt_create( 8 <-- 'meeting'): DEBUG --> 8
+EventType.dflt_create( 9 <-- 'job travel'): DEBUG --> 9
+EventType.dflt_create( 10 <-- 'conference'): DEBUG --> 10
+EventType.dflt_create( 11 <-- 'trip'): DEBUG --> 11
+EventType.dflt_create(  <-- ''): DEBUG --> Something gone wrong
+EventType.dflt_create( 11 <-- 'trip'): DEBUG --> 11
+T40 Ric after crea creo calendari personali..
+T40 Ric after crea creo calendari personali..
+rake aborted!
+ActiveRecord::UnknownAttributeError: unknown attribute: abstract
+/var/www/riclife/db/seeds.rb:89
+Tasks: TOP => db:setup => db:seed
+(See full trace by running task with --trace)
