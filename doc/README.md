@@ -1,6 +1,9 @@
 Riclife
 -------
 
+[![Build Status](https://travis-ci.org/palladius/riclife.svg?branch=master)](https://travis-ci.org/palladius/riclife)
+[![Code Climate](https://codeclimate.com/github/palladius/riclife.png)](https://codeclimate.com/github/palladius/riclife)
+
 Welcome to Riclife.
 Use this README file to introduce your application and point to useful places in the API for learning more.
 
