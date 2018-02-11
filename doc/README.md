@@ -17,10 +17,12 @@ INSTALL
  
 Metti qui come installare il mio cazzillo.
 
-TODO per numero
+    1. cp .env.dist .env
+    2. Tweak `.env` and save it somewhere
 
 figata: metti a posto i role requirements sicche ADMIN sia rcarlesso e gli altri USER
-- http://code.google.com/p/rolerequirement/
+
+    http://code.google.com/p/rolerequirement/
 
 1 rimetti 2.3.5 in environment.rb e magari anche l observer che hai tolto...
 2 import persone da LDIF (magari con un check di validita su NOME+COGNOME o COGNOME+NOME e cosi via) e implementa warning
@@ -28,9 +30,8 @@ figata: metti a posto i role requirements sicche ADMIN sia rcarlesso e gli altri
 3 cancan come modulo di autenticazione..
 9 Copia da railtickets il concetto di Data plugin figata (guarda due date in services!)
 8	figata: http://conceptspace.wikidot.com/blog:19
-5 Installa StreamLined per scaffolding.. morto, quindi installo activescaffolding..
 7 prova Calendario fichissimo: http://github.com/elevation/event_calendar
-8 AMDIN PANNELLO http://icebergist.com/posts/restful-admin-namespaced-controller-using-scaffolding
+8 ADMIN PANNELLO http://icebergist.com/posts/restful-admin-namespaced-controller-using-scaffolding
 9 CHAT BOT che fai le search e le ADD da chat!
 9 CACHE per i grafici: 
 	- expire_page :controller =>"/articles", :action =>"index"
@@ -38,7 +39,7 @@ figata: metti a posto i role requirements sicche ADMIN sia rcarlesso e gli altri
 script/generate model loan title:string description:text quantity:float currency:string user_from_id:integer user_to_id:integer
 
 GMail auth
---------------------
+----------
 
 You can do GMail login and import contacts (!)
 Magari puoi mettere username = email senza gmail.com e creare utente al primo login...

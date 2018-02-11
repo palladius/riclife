@@ -1,0 +1,4 @@
+# Variables are taken from `.env` copied from `.env.dist`
+--- 
+  :user_name: <%= ENV['GMAIL_USERNAME'] %>
+  :password: <%= ENV['GMAIL_USERNAME'] %>
