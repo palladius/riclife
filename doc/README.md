@@ -7,6 +7,10 @@ Riclife
 Welcome to Riclife.
 Use this README file to introduce your application and point to useful places in the API for learning more.
 
+Versions:
+
+*    ruby:  '1.8.7'
+*    rails: '2.3.18'
 
 INSTALL
 -------
@@ -33,10 +37,10 @@ figata: metti a posto i role requirements sicche ADMIN sia rcarlesso e gli altri
 
 script/generate model loan title:string description:text quantity:float currency:string user_from_id:integer user_to_id:integer
 
-Autenticazione gmail
+GMail auth
 --------------------
 
-Puoi fare login con gmail E fare import dei contatti.
+You can do GMail login and import contacts (!)
 Magari puoi mettere username = email senza gmail.com e creare utente al primo login...
 che dici?
 
@@ -46,8 +50,8 @@ Sembra una puttanata da qui (crea ilk GmailAuthController che faccia sto cazzill
 
 	http://www.theirishpenguin.com/2008/06/25/a-little-help-on-importing-gmail-contacts-using-ruby-on-rails/
 
-Video e Musica
---------------
+Video & Music
+-------------
 
 Sistema di video e canzoni A TAG, che ci posso mettere DIAVOLO e trovo sia il film
 indiavolato, il diavolo veste prada e sympathy for the devil :)
@@ -58,37 +62,10 @@ magari faccio person e lo metto come java bean con metodi tipo SYNCABLE :)
 
 $ script/generate controller Site index docs rss
 
-da hiveminder
--------------
+TODOs
+-----
 
-	#ZPJC (A) crea URL magici che parsano info (last_updated, ..) e semplifica crea persona!!! (Due 2010-04-17) [riclife sabatodo]
-	#328LC (A) Implementa il Journaling (whatever u do, it logs in the journal an html link with "LNK_Riccardo just created a LNK_event here". decidi se LNK e' dinamico (con tipo GRAFFE) o statico. io farei statico tipo {{event|11}} [riclife sabatodo]
-	#YV7M (B) comments e rotto +bug [bug riclife]
-	#YV75 guarda http://conceptspace.wikidot.com/blog:19 [riclife]
-	#YV7G esporta venues come kmz [devel projects riclife]
-	#YV7V riclife ora che c e il magic_create fa un task che importa tutto da TODO list [riclife]
-	#YV85 facebook gemma2 ma piu semplice http://facebook-ruby.sourceforge.net/ [@hetzner cool craic devel projects rails riclife]
-	#32TW4 implementa Facebook Comments per un blog [rails riclife sabatodo]
-	#YV7P (D) importa note dalla mia lista spesa/note fichissima in modo automatico e parsa + e chicciole come se piovesse e le date pure [cool riclife]
-
-
-RicLife
--------
-
-TODO
-----
-
-	9 fai un Ricfile upload che quando fai backuppa backuppa sia qui che con riclife-backuppa, che invece fa un bel ActiveReacord.create( :hostname => `hostname`, :user => `whoami`, :path => $1, :comments => $REST )
-
-Figata:
-	 results = Geocoding::get("George Docks, IFSC, Dublin")
-
-capistrano ok, tante modifiche 22ottobre
-capistrano ora funge da dio, immune a cambiamenti di DB :)
-
-Cose da fare: 
-	usa l'acts as synchable e vedi che viene fuori...
-	L'ho messo in tmp/ per sicurezza, vedi se riesci a sincronizzare due Posts e se si... comincia a divertirti!
+Riccardo TODOs: see `TODO` files
 
 FEATURES
 --------
@@ -98,27 +75,30 @@ Ora puoi chiamare:
   rake send_mailing MAILING_ID=1 COMMENT="vattelapesca giallo blu"
     gem install icalendar
 
+Figata:
+
+	 results = Geocoding::get("George Docks, IFSC, Dublin")
+
+capistrano ok, tante modifiche 22ottobre
+capistrano ora funge da dio, immune a cambiamenti di DB :)
+
 HISTORY
 -------
 
 Installed ActiveScaffolding:
- script/plugin install git://github.com/activescaffold/active_scaffold.git
-#- mi sa che per le exception notifiers appena emsee:
-#http://github.com/rails/exception_notification/
 
-script/plugin install http://juixe.com/svn/acts_as_voteable
-script/generate scaffold --svn sport_activity name:string description:text duration:integer calories:integer activity:string date:date
-script/plugin install exception_notification
+    script/plugin install git://github.com/activescaffold/active_scaffold.git
+
+Mi sa che per le exception notifiers appena messe:
+
+    http://github.com/rails/exception_notification/
+
+    script/plugin install http://juixe.com/svn/acts_as_voteable
+    script/generate scaffold --svn sport_activity name:string description:text duration:integer calories:integer activity:string date:date
+    script/plugin install exception_notification
 
 DOC: http://rails.brentsowers.com/2008/01/exceptionnotification-plugin-for.html
 
-
-TODO
-----
-
-Autocompletion:
-  http://codeintensity.blogspot.com/2008/02/auto-complete-text-fields-in-rails-2.html
-RDocs?!?
 
 Thanks
 ------

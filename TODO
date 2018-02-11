@@ -1,2 +1,26 @@
 
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+1. Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+2. From hiveminder:
+
+	#ZPJC (A) crea URL magici che parsano info (last_updated, ..) e semplifica crea persona!!! (Due 2010-04-17) [riclife sabatodo]
+	#328LC (A) Implementa il Journaling (whatever u do, it logs in the journal an html link with "LNK_Riccardo just created a LNK_event here". decidi se LNK e' dinamico (con tipo GRAFFE) o statico. io farei statico tipo {{event|11}} [riclife sabatodo]
+	#YV7M (B) comments e rotto +bug [bug riclife]
+	#YV75 guarda http://conceptspace.wikidot.com/blog:19 [riclife]
+	#YV7G esporta venues come kmz [devel projects riclife]
+	#YV7V riclife ora che c e il magic_create fa un task che importa tutto da TODO list [riclife]
+	#YV85 facebook gemma2 ma piu semplice http://facebook-ruby.sourceforge.net/ [@hetzner cool craic devel projects rails riclife]
+	#32TW4 implementa Facebook Comments per un blog [rails riclife sabatodo]
+	#YV7P (D) importa note dalla mia lista spesa/note fichissima in modo automatico e parsa + e chicciole come se piovesse e le date pure [cool riclife]
+
+
+3. fai un Ricfile upload che quando fai backuppa backuppa sia qui che con riclife-backuppa, che invece fa un bel ActiveReacord.create( :hostname => `hostname`, :user => `whoami`, :path => $1, :comments => $REST )
+
+4. Cose da fare: 
+
+	usa l'acts as synchable e vedi che viene fuori...
+	L'ho messo in tmp/ per sicurezza, vedi se riesci a sincronizzare due Posts e se si... comincia a divertirti!
+
+5. Autocompletion: http://codeintensity.blogspot.com/2008/02/auto-complete-text-fields-in-rails-2.html
+
+6. Dockerization.
