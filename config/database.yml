@@ -16,7 +16,18 @@ test: &TEST
   timeout: 5000
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  #url: <%= ENV['DATABASE_URL'] %>
+  # pleonastic but... needed by 2.3.18 :/ so not DRY which is H.U.M.I.D.
+  adapter: <%= ENV['DATABASE_ADAPTER'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  database: <%= ENV['DATABASE_DBNAME'] %>
+  port: 3306
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+
 
 cucumber:
   <<: *TEST

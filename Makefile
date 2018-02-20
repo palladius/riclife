@@ -21,8 +21,7 @@ run-dev:
 	script/server
 
 run-prod: bundle
-	source .env
-	script/server
+	./run-prod.sh
 
 tests:
 	@echo "T1. You added custom file: 'config/smtp_gmail.yml'"
