@@ -1,0 +1,1 @@
+2018-02-20 v1.2.5  Added .dockerignore and better config DB for mysql2 (like DATABASE_URL) to env.dist

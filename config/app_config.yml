@@ -1,5 +1,4 @@
 # Generata automaticamente da Ryan Bates, sto solo cercando di giocherellarci...
-# $Id$
 development:
   domain: localhost:3000
   foo: bar-devel
@@ -7,7 +6,8 @@ test:
   domain: test.host
   foo: foo-test
 production:
-  domain: riclife.palladius.eu
+  # e.g., "riclife.palladius.eu"
+  domain: <%= PROD_HOSTNAME %> 
   foo: baz-prod
 tutte:
   title: "Riclife, la mia applicazione per test sociali!"

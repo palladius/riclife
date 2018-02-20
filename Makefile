@@ -17,7 +17,11 @@ run: bundle
 	script/server
 
 run-dev:
-	rake db:setup 
+	rake db:setup
+	script/server
+
+run-prod: bundle
+	source .env
 	script/server
 
 tests:

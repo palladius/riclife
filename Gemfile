@@ -7,6 +7,12 @@ ruby "1.8.7"
 
 gem 'rails', '2.3.18'
 
+#gem 'mysql2'
+gem 'mysql2',  '>= 0.3.18', '< 0.5'
+gem 'activerecord-mysql2-adapter' # needed for mysql..
+
+
+
 # Riccardo, note that although all of these dependencies are here, not all are activated in:
 # config/environment.rb
 gem 'contacts'
