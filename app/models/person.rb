@@ -14,6 +14,10 @@ class Person < ActiveRecord::Base
   #acts_as_commentable #TBD
   #acts_as_carlesso
 
+  ### riccardo BEGIN
+  has_one :user
+  ## RICCARDO_END
+
   validates_presence_of :name, :nickname, :surname # , :email 
   validates_inclusion_of :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma, :in => 3..18, :message => "Maccome non conosci i limiti di D&D???"
   validates_format_of :nickname, :with => /^[a-z_]+$/, :message  => " only lowercase chars and underscores (i.e. r_carlesso)"

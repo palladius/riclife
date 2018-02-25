@@ -49,7 +49,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :event_types, :active_scaffold => true
   map.resources :events, :active_scaffold => true,      :member => { :gmap => :get }
   map.resources :friendships #, :active_scaffold => true
-  map.resources :gms # , :active_scaffold => true
+  map.resources :gms, :active_scaffold => true
   map.resources :groups, :active_scaffold => true
   map.resources :hosts, :active_scaffold => true
   map.connect 'identities/contacts',          :controller => "identities",    :action => 'contacts'      #    see the contacts from GMail, Hotmail, ...

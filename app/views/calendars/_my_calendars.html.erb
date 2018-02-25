@@ -1,9 +1,11 @@
 <%= render :partial => 'shared/crate_begin', :locals =>
   { :title => "My Calendars", :icon_path => 'models/calendar.png' }
 %>
-  <% Calendar.find_all_by_person_id(current_user.person.id).each{ |x| %>
-    <li>
-      <%= render :partial => 'calendars/fancy', :locals => { :calendar => x } %>
-    </li>
-  <% } %>
+  <% if current_user and current_user.person %>
+	  <% Calendar.find_all_by_person_id(current_user.person.id).each{ |x| %>
+	    <li>
+	      <%= render :partial => 'calendars/fancy', :locals => { :calendar => x } %>
+	    </li>
+	  <% } %>
+  <% end %>
 <%= render :partial => 'shared/crate_end' %>

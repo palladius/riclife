@@ -11,6 +11,8 @@ gem 'rails', '2.3.18'
 gem 'mysql2',  '>= 0.3.18', '< 0.5'
 gem 'activerecord-mysql2-adapter' # needed for mysql..
 
+# acts_as_state_machine for user stuff
+gem 'aasm'
 
 
 # Riccardo, note that although all of these dependencies are here, not all are activated in:

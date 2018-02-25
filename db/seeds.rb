@@ -61,8 +61,35 @@ open("http://openconcept.ca/sites/openconcept.ca/files/country_code_drupal_0.txt
 end
 
 
-@arr_event_types.each { |et | 	EventType.dflt_create( et ) }
+@arr_event_types.each {|et| EventType.dflt_create(et) }
 
+p_mickey = Person.create(
+     :name     => 'Mickey', 
+     :surname  => 'Mouse', 
+     :nickname => 'mmouse', 
+     :email    => 'mickey.mouse@example.com', 
+     :tags     => 'virtual auto_created tmp person bot auto db:seed seeds',
+     :virtual  =>  true,
+     :notes    => "Created from db:seed"
+)
+p_minney = Person.create(
+     :name     => 'Minerva', 
+     :surname  => 'Mouse', 
+     :nickname => 'minnie', 
+     :email    => 'mickey.mouse@example.com', 
+     :tags     => 'virtual auto_created tmp person bot auto db:seed seeds',
+     :virtual  =>  true,
+     :notes    => "Created from db:seed. URL: https://en.wikipedia.org/wiki/Minnie_Mouse#/media/File:Minnie_Mouse.png"
+)
+p_root = Person.create(
+     :name     => 'Walt', 
+     :surname  => 'Disney', 
+     :nickname => 'root', 
+     :email    => 'walt.disney@example.com', 
+     :tags     => 'virtual auto_created tmp person bot auto db:seed seeds admin',
+     :virtual  =>  true,
+     :notes    => "Created from db:seed. The Walt Disney Company Root CA"
+)
 #foreach user
   # create 2 calendars: personal (priv) and public (pub)
   # whenever you create a new user, trigger this func!
@@ -70,26 +97,36 @@ end
 #  1. Create users  
 root = User.create(
   :login => 'riclife',
-  :password => '126tfshqNnTbq4br4',
-  :password_confirmation => '126tfshqNnTbq4br4',
-  :email => 'riclife@gmail.com' )
+  :password => '126tfshqNnTbq4br4', # fake - not gmail account, gmail account is in my pwsafe ;-)
+  :password_confirmation => '126tfshqNnTbq4br4', # ditto
+  :email => 'riclife.bot@gmail.com',
+  :person_id => p_root.id
+) # this actually exists and bvelongs to a certain Ricardo Rocha :)
+#root.after_create()
+root.person = p_root
+root.save
+
 User.create(
   :login => 'riccardo',
   :password => 'provadev',
   :password_confirmation => 'provadev',
-  :email => 'riccardo.carlesso@gmail.com' )
+  :email => 'riccardo.carlesso@gmail.com'
+)
 
 if RAILS_ENV == 'development'
-  print yellow("Only in dev I activate the root account. Otherwise it's dangerous")
-  root.status = 'active'
+  print yellow("Only in dev I activate the root account. Otherwise it's dangerous!")
+  root.state = 'active'
   root.save
 end
 
+print "Created users: ", User.all()
+print "Created people: ", Person.all()
+
 
 Page.create( 
-  :title => 'Help' 
-# , :header => "This page helps you districate through all these crazy things Riccardo did!"
-# , :body => "Please look at the amazing code: https://github.com/palladius/riclife"
+   :title => 'Help' 
+ #, :header => "This page helps you districate through all these crazy things Riccardo did!"
+ #, :body => "Please look at the amazing code: https://github.com/palladius/riclife"
 )
 
 %w{ ferrara bologna dublino zurigo }.each{|city|
@@ -99,3 +136,6 @@ Page.create(
     :regione => "Emilia-Romagna"
   )
 }
+
+
+

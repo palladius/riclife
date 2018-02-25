@@ -1,6 +1,7 @@
 <%= render :partial => 'shared/crate_begin', :locals =>
   { :title => "My Projects", :icon_path => 'models/project.png' }
 %>
+ <% if current_user and current_user.person then %>
   <% if current_user.person.object_id then %>
 	  <% Project.by_person(current_user.person).each{ |x| %>
 	    <li>
@@ -8,4 +9,7 @@
 	    </li>
 	  <% } %>
   <% end %>
+ <% else %>
+  No person for this user :/
+ <% end %>
 <%= render :partial => 'shared/crate_end' %>

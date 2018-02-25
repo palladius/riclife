@@ -1,10 +1,18 @@
 require 'digest/sha1'
+
 class User < ActiveRecord::Base
   # Virtual attribute for the unencrypted password
   attr_accessor :password
 
   ### riccardo BEGIN
-  belongs_to :person
+  # User.person_id
+  belongs_to :person  
+  # TODO add to DB with proper migration..
+#  enum role: {
+#    normal: 0, # default
+#    admin:  1,
+#    root:   2
+#  }
   ## RICCARDO_END
 
   validates_presence_of     :login, :email
@@ -113,9 +121,12 @@ class User < ActiveRecord::Base
 
   # RICCARDO: dflt sys user... assert that it exists :)
   def self.default_system_user
-    User.find_by_login('riclife') 
+    User.find_by_login('riclife')
   end
 
+  def self.names
+    map{|u| u.name }
+  end
 
   def before_create
     if Person.find_by_nickname(login)
@@ -130,30 +141,35 @@ class User < ActiveRecord::Base
   end
 
   # popola con calendari e cagate varie
- def after_create()
-   puts "T40 Ric after crea creo calendari personali.."
-   # dovrei farlo transazionale...
-   ### IMPORTANTE TBD_IMP
-   # TBD verifica se esiste già uno con quella email!! Se no fallisce
+  def after_create()
+    puts "T40 Ric after crea creo calendari personali.."
+    # dovrei farlo transazionale...
+    #role = 0
+    ### IMPORTANTE TBD_IMP
+    # TBD verifica se esiste già uno con quella email!! Se no fallisce
     my_person = Person.create(
          :name     => login, 
-         :surname  => 'Mc AutoCreated', 
+         :surname  => 'AutoCreated', 
          :nickname => login, 
-         :email    =>     email, 
-         :tags     =>     'virtual auto_created tmp person bot auto',
+         :email    => email, 
+         :tags     => 'virtual auto_created tmp person bot auto',
          :virtual  =>  true,
-         :notes => "'Creato causa login di user #{id} e mancava il suo personaggio, ed eccomi qui..'" 
-       )
-   #my_person = Person.find_by_nickname(login) # dovrebbe essere creato dal before_create..
-   #my_person = Person.find_or_create_by_nickname!(login) #, :mail =>     email, :notes => "'Just created user #{id}..'" )
-   pers = Calendar.create( 
-    :name => "#{login} Personal Calendar", 
-    :person_id => my_person.id, 
-    :private => true ) rescue "couldnt create it, amen.."
-   send_gms("Welcome '#{login}' to RicLife. Read the docs before disturbing pliz",'PS No docs have been written, though... :P')
-   Gms.send_all("Everybody say hello to new user: #{login}!")
-   #Calendar.create( :name => 'Public stuff', :user_id => self.id, :private => false )
- end
+         :notes    => "Creato causa login di user #{id} e mancava il suo personaggio, ed eccomi qui.."
+    )
+    #my_person = Person.find_by_nickname(login) # dovrebbe essere creato dal before_create..
+    #my_person = Person.find_or_create_by_nickname!(login) #, :mail =>     email, :notes => "'Just created user #{id}..'" )
+    #my_person.save
+    self.person_id = my_person.id
+    self.person = my_person
+    #self.save!
+    pers = Calendar.create( 
+      :name => "#{login} Personal Calendar", 
+      :person_id => my_person.id, 
+      :private => true ) rescue "couldnt create it, amen.."
+    send_gms("Welcome '#{login}' to RicLife. Read the docs before disturbing pliz",'PS No docs have been written, though... :P')
+    Gms.send_all("Everybody say hello to new user: #{login}!")
+    #Calendar.create( :name => 'Public stuff', :user_id => self.id, :private => false )
+  end
 
  def to_s
    login
@@ -181,7 +197,11 @@ class User < ActiveRecord::Base
  end
  alias :feed2    :feed
  alias :name     :nickname
- alias :nickname :nickname
+
+ def is_admin?
+   return login == 'riclife'
+ end
+ alias :is_root?    :is_admin?
 
  
  # def person
