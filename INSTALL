@@ -1,3 +1,8 @@
+Make sure you have latest ruby (just kidding):
+
+    rbenv install 1.8.7 # doesnt work :/
+    rbenv install 1.9.3-p551 # this seems to work
+
 
 Simply you need to:
 
@@ -8,7 +13,6 @@ Simply you need to:
 And you should be ready to go:
 
     script/server
-
 
 # Obsolete
 
