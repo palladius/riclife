@@ -1,6 +1,8 @@
 Riclife
 -------
 
+Note: I have two versions of it, and I'm currently trying to understand which works: `riclife` on github / `riclife2020` on gprojects.
+
 [![Build Status](https://travis-ci.org/palladius/riclife.svg?branch=master)](https://travis-ci.org/palladius/riclife)
 [![Code Climate](https://codeclimate.com/github/palladius/riclife.png)](https://codeclimate.com/github/palladius/riclife)
 
@@ -9,12 +11,12 @@ Use this README file to introduce your application and point to useful places in
 
 Versions:
 
-*    ruby:  '1.8.7'
-*    rails: '2.3.18'
+* ruby:  '1.8.7' (rbenv install 1.8.7)
+* rails: '2.3.18'
 
 INSTALL
 -------
- 
+
 Metti qui come installare il mio cazzillo.
 
     1. cp .env.dist .env
@@ -33,7 +35,7 @@ figata: metti a posto i role requirements sicche ADMIN sia rcarlesso e gli altri
 7 prova Calendario fichissimo: http://github.com/elevation/event_calendar
 8 ADMIN PANNELLO http://icebergist.com/posts/restful-admin-namespaced-controller-using-scaffolding
 9 CHAT BOT che fai le search e le ADD da chat!
-9 CACHE per i grafici: 
+9 CACHE per i grafici:
 	- expire_page :controller =>"/articles", :action =>"index"
 
 script/generate model loan title:string description:text quantity:float currency:string user_from_id:integer user_to_id:integer
